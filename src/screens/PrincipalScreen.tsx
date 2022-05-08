@@ -91,36 +91,36 @@ const PrincipalScreen = () => {
 
             <View style={{ ...styles.contenedorItems }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Lista de supermercado</Text>
-                <ScrollView style={styles.scrollView} >
+                <ScrollView style={{...styles.scrollView, backgroundColor:'#95B665'}} >
                     {/* <TextInput multiline={true} numberOfLines={100} style={{ color: '#000',fontSize: 24}} > */}
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 1</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 2</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 3</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 4</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 5</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 6</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 7</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 8</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 9</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} >  Ingrediente 10</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 1</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 2</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 3</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 4</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 5</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 6</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 7</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 8</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 9</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 10</Text>
                     {/* </TextInput> */}
                 </ScrollView>
             </View>
 
             <View style={{ ...styles.contenedorItems }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Valores corporales</Text>
-                <ScrollView style={styles.scrollView} >
+                <ScrollView style={{...styles.scrollView, backgroundColor:'#C95244'}} >
                     {/* <TextInput multiline={true} numberOfLines={100} style={{ color: '#000',fontSize: 24}} > */}
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 1</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 2</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 3</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 4</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 5</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 6</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 7</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 8</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 9</Text>
-                    <Text style={{ color: '#000', fontSize: 24 }} > Valor corporal 10</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 1</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 2</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 3</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 4</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 5</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 6</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 7</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 8</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 9</Text>
+                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 10</Text>
                     {/* </TextInput> */}
                 </ScrollView>
             </View>
