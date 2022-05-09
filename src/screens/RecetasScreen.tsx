@@ -236,7 +236,7 @@ const RecetasScreen = () => {
                         <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Postres</Text>
                         <ScrollView style={styles.scrollView} horizontal={true}>
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
+                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
                                 <View>
                                     <Text
                                         // numberOfLines={1}
@@ -246,7 +246,7 @@ const RecetasScreen = () => {
                             </TouchableOpacity>
 
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
+                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
                                 <View>
                                     <Text
                                         // numberOfLines={1}
@@ -255,7 +255,7 @@ const RecetasScreen = () => {
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
+                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
                                 <View>
                                     <Text
                                         // numberOfLines={1}
@@ -264,7 +264,7 @@ const RecetasScreen = () => {
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
+                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
                                 <View>
                                     <Text
                                         // numberOfLines={1}
@@ -273,7 +273,7 @@ const RecetasScreen = () => {
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
+                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
                                 <View>
                                     <Text
                                         // numberOfLines={1}
@@ -282,7 +282,7 @@ const RecetasScreen = () => {
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
+                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
                                 <View>
                                     <Text
                                         // numberOfLines={1}
@@ -291,7 +291,7 @@ const RecetasScreen = () => {
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
+                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
                                 <View >
                                     <Text
                                         // numberOfLines={1}
