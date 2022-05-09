@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     },
     principalContainer: {
         flex: 1,
-        paddingHorizontal: 20,
+         paddingHorizontal: 20,
         justifyContent: 'flex-start',
       
         backgroundColor:'#FCF5E3',
@@ -23,25 +23,32 @@ export const styles = StyleSheet.create({
         
     },
     contenedorItems:{
-        marginTop:20,
+        marginTop:8,
         width:'100%',
-        height:'25%',
+         height:165,
     },
     scrollView: {
         backgroundColor: '#E7DFC6',
         borderRadius:6,     
         padding:10, 
         width:'100%',
+        height:20,
         display:'flex',
        
     },
  
     btnCuadrado:{
+        
         borderRadius:4,
         backgroundColor:'#95B665',
         width:100,
+        // height:100,
         marginRight:10,
         justifyContent:'flex-end',
         padding:10,
+    },
+    btnRectangular:{
+        justifyContent:'flex-start',
+        width:200, 
     },
 })

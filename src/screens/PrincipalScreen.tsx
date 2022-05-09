@@ -7,10 +7,11 @@ import { styles } from '../theme/appTheme';
 const PrincipalScreen = () => {
     return (
         <View style={styles.principalContainer} >
-            <View style={{borderBottomWidth:1, borderStyle:'solid',borderBottomColor:'#000'}}>
-            <Text style={styles.textoCabecera} > Calendaxo Food </Text>
+            <View style={{ borderBottomWidth: 1, borderStyle: 'solid', borderBottomColor: '#000' }}>
+                <Text style={styles.textoCabecera} > Calendaxo Food </Text>
 
             </View>
+            {/* Resumen */}
             <View style={styles.contenedorItems} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Resumen</Text>
                 <ScrollView style={styles.scrollView} horizontal={true}>
@@ -89,9 +90,10 @@ const PrincipalScreen = () => {
                 </ScrollView>
             </View>
 
+            {/* Lista del supermercado*/}
             <View style={{ ...styles.contenedorItems }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Lista de supermercado</Text>
-                <ScrollView style={{...styles.scrollView, backgroundColor:'#95B665'}} >
+                <ScrollView style={{ ...styles.scrollView, backgroundColor: '#95B665' }} >
                     {/* <TextInput multiline={true} numberOfLines={100} style={{ color: '#000',fontSize: 24}} > */}
                     <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 1</Text>
                     <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 2</Text>
@@ -107,9 +109,11 @@ const PrincipalScreen = () => {
                 </ScrollView>
             </View>
 
+
+            {/* Valores corporales */}
             <View style={{ ...styles.contenedorItems }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Valores corporales</Text>
-                <ScrollView style={{...styles.scrollView, backgroundColor:'#C95244'}} >
+                <ScrollView style={{ ...styles.scrollView, backgroundColor: '#C95244' }} >
                     {/* <TextInput multiline={true} numberOfLines={100} style={{ color: '#000',fontSize: 24}} > */}
                     <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 1</Text>
                     <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Valor corporal 2</Text>

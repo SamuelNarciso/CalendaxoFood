@@ -3,6 +3,7 @@ import {
   SafeAreaView, StatusBar
 } from 'react-native';
 import PrincipalScreen from './src/screens/PrincipalScreen';
+import RecetasScreen from './src/screens/RecetasScreen';
 import { styles } from './src/theme/appTheme';
 
 
@@ -15,7 +16,8 @@ const App = () => {
 
     <SafeAreaView style={styles.fondo} >
       <StatusBar backgroundColor={ styles.fondo.backgroundColor  } barStyle='dark-content'/>
-      <PrincipalScreen />
+      {/* <PrincipalScreen /> */}
+      <RecetasScreen/>
     </SafeAreaView>
   );
 };
