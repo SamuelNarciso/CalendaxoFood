@@ -64,7 +64,7 @@ export const styles = StyleSheet.create({
     calendario:{
     backgroundColor: '#A76D60', 
     width: '100%',
-    height: '35%',
+    height: '32%',
     borderRadius:6,
     marginTop:20
     }
