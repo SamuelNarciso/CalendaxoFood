@@ -7,7 +7,8 @@ import {
     View
 } from 'react-native';
 const CalendarioScreen = () => {
-    return (<View style={styles.principalContainer}>
+    return (
+    <View style={styles.principalContainer}>
         <View style={{ borderBottomWidth: 1, borderStyle: 'solid', borderBottomColor: '#000' }}>
             <Text style={styles.textoCabecera} > Calendario </Text>
 

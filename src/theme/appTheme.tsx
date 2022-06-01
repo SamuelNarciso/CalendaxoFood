@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
         justifyContent: 'flex-start',
 
+        // backgroundColor: '#FCF5E3',
         backgroundColor: '#FCF5E3',
         color: '#393534',
         display: 'flex',
@@ -20,6 +21,13 @@ export const styles = StyleSheet.create({
         color: '#393534',
         textAlign: 'center',
         fontSize: 32
+
+    },
+    subTexto: {
+        marginTop: 8,
+        color: '#95B665',
+        textAlign: 'center',
+        fontSize: 24
 
     },
     contenedorItems: {

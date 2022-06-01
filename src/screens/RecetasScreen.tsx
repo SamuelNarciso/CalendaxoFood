@@ -1,5 +1,7 @@
 import React from 'react';
 import { styles } from '../theme/appTheme';
+import { bebidas, desayunos, almuerzos, postres } from '../assets/recetas'
+import CardReceta from '../components/CardReceta';
 import {
     ScrollView,
     Text,
@@ -12,6 +14,7 @@ const RecetasScreen = () => {
             <View style={{ borderBottomWidth: 1, borderStyle: 'solid', borderBottomColor: '#000' }}>
                 <Text style={styles.textoCabecera} > Recetas </Text>
             </View>
+
             <View style={{ height: '100%', paddingBottom: 100 }}>
                 <ScrollView style={{}}>
 
@@ -19,143 +22,24 @@ const RecetasScreen = () => {
                     <View style={styles.contenedorItems} >
                         <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Desayunos</Text>
                         <ScrollView style={styles.scrollView} horizontal={true}>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Crumble de manzana  </Text>
-                                </View>
-                            </TouchableOpacity>
-
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Hot Cakes </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Pan Frances </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de arroz </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Chilaquiles rojos </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de glorias </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View >
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Lentejas </Text>
-                                </View>
-                            </TouchableOpacity>
-
+                            {desayunos.map(e => <CardReceta nombre={e.nombre} key={e.nombre} />)}
                         </ScrollView>
                     </View>
+
+                    {/* Bebidas */}
+                    <View style={styles.contenedorItems} >
+                        <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Bebidas</Text>
+                        <ScrollView style={styles.scrollView} horizontal={true}>
+                            {bebidas.map(e => <CardReceta nombre={e.nombre} key={e.nombre} color='#C95244' />)}
+                        </ScrollView>
+                    </View>
+
 
                     {/* Almuerzos */}
                     <View style={styles.contenedorItems} >
                         <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Almuerzos</Text>
                         <ScrollView style={styles.scrollView} horizontal={true}>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Crumble de manzana  </Text>
-                                </View>
-                            </TouchableOpacity>
-
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Hot Cakes </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Pan Frances </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de arroz </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Chilaquiles rojos </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de glorias </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: '#C95244' }}>
-                                <View >
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Lentejas </Text>
-                                </View>
-                            </TouchableOpacity>
-
+                            {almuerzos.map(e => <CardReceta nombre={e.nombre} key={e.nombre} />)}
                         </ScrollView>
                     </View>
 
@@ -163,71 +47,7 @@ const RecetasScreen = () => {
                     <View style={styles.contenedorItems} >
                         <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Cenas</Text>
                         <ScrollView style={styles.scrollView} horizontal={true}>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Crumble de manzana  </Text>
-                                </View>
-                            </TouchableOpacity>
-
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Hot Cakes </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Pan Frances </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de arroz </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Chilaquiles rojos </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de glorias </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View >
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Lentejas </Text>
-                                </View>
-                            </TouchableOpacity>
-
+                            {desayunos.map(e => <CardReceta nombre={e.nombre} key={e.nombre} color='#C95244' />)}
                         </ScrollView>
                     </View>
 
@@ -235,148 +55,10 @@ const RecetasScreen = () => {
                     <View style={styles.contenedorItems} >
                         <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Postres</Text>
                         <ScrollView style={styles.scrollView} horizontal={true}>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Crumble de manzana  </Text>
-                                </View>
-                            </TouchableOpacity>
-
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Hot Cakes </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Pan Frances </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de arroz </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Chilaquiles rojos </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de glorias </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular,backgroundColor: '#C95244' }}>
-                                <View >
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Lentejas </Text>
-                                </View>
-                            </TouchableOpacity>
-
+                            {postres.map(e => <CardReceta nombre={e.nombre} key={e.nombre} />)}
                         </ScrollView>
-
-
                     </View>
-                    {/* Bebidas */}
-                    <View style={styles.contenedorItems} >
-                        <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Bebidas</Text>
-                        <ScrollView style={styles.scrollView} horizontal={true}>
 
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Crumble de manzana  </Text>
-                                </View>
-                            </TouchableOpacity>
-
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Hot Cakes </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Pan Frances </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de arroz </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Chilaquiles rojos </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View>
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Atole de glorias </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={{ ...styles.btnCuadrado, ...styles.btnRectangular }}>
-                                <View >
-                                    <Text
-                                        // numberOfLines={1}
-                                        adjustsFontSizeToFit
-                                        style={{ fontSize: 25, marginBottom: 20 }} > Lentejas </Text>
-                                </View>
-                            </TouchableOpacity>
-
-                        </ScrollView>
-
-
-                    </View>
 
                 </ScrollView>
 
