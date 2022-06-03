@@ -7,6 +7,8 @@ import RecetasScreen from '../screens/RecetasScreen';
 import { Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { StackNavigationRecetas } from './stackNavigationRecetas';
+import { StackNavigationHome } from './stackNavigationHome';
+import { StackNavigationCalendario } from './stackNavigationCalendario';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,10 +44,19 @@ function Tabs() {
 
         >
 
-            {/* <Tab.Screen name="Home"        options={{tabBarLabelStyle:{ fontWeight:'400', fontSize:18 },tabBarIcon:()=>{ return <Text>Hola </Text> } }} component={PrincipalScreen} /> */}
-            <Tab.Screen name="Home" options={{ tabBarLabelStyle: { fontWeight: '400', fontSize: 14 } }} component={PrincipalScreen} />
-            <Tab.Screen name="Recetas" options={{ tabBarLabelStyle: { fontWeight: '400', fontSize: 14 } }} component={StackNavigationRecetas} />
-            <Tab.Screen name="Calendario" options={{ tabBarLabelStyle: { fontWeight: '400', fontSize: 14 } }} component={CalendarioScreen} />
+            <Tab.Screen name="Home"
+                options={{ tabBarLabelStyle: { fontWeight: '400', fontSize: 14 } }}
+                component={StackNavigationHome} />
+
+            <Tab.Screen name="Recetas"
+                options={{ tabBarLabelStyle: { fontWeight: '400', fontSize: 14 } }}
+                component={StackNavigationRecetas} />
+
+            <Tab.Screen name="Calendario"
+                options={{ tabBarLabelStyle: { fontWeight: '400', fontSize: 14 } }}
+                component={StackNavigationCalendario} />
+
+                
         </Tab.Navigator>
     );
 

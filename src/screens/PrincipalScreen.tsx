@@ -4,7 +4,12 @@ import {
     Text, TextInput, TouchableOpacity, View
 } from 'react-native';
 import { styles } from '../theme/appTheme';
-const PrincipalScreen = () => {
+import { StackScreenProps } from '@react-navigation/stack';
+
+
+interface Props extends StackScreenProps<any, any> { };
+
+const PrincipalScreen = ({ navigation }: Props) => {
     return (
         <View style={styles.principalContainer} >
             <View style={{ borderBottomWidth: 1, borderStyle: 'solid', borderBottomColor: '#000' }}>
@@ -16,74 +21,109 @@ const PrincipalScreen = () => {
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Resumen</Text>
                 <ScrollView style={styles.scrollView} horizontal={true}>
 
-                    <TouchableOpacity style={styles.btnCuadrado}>
+                    <TouchableOpacity style={styles.btnCuadrado}
+                        onPress={() => navigation.navigate('StackNavigationDia',
+                            {
+                                nombre: 'Lunes'
+                            }
+                        )}
+                    >
                         <View>
                             <Text
                                 numberOfLines={1}
                                 adjustsFontSizeToFit
-                                style={{ fontSize: 25 }} > Lunes </Text>
-                            <Text style={{ fontSize: 18, marginBottom: 10 }} > 9 - May </Text>
+                                style={{ fontSize: 25 }} >Lunes</Text>
                         </View>
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={styles.btnCuadrado}>
+                    <TouchableOpacity style={styles.btnCuadrado}
+                        onPress={() => navigation.navigate('StackNavigationDia',
+                            {
+                                nombre: 'Martes'
+                            }
+                        )}
+                    >
                         <View>
                             <Text
                                 numberOfLines={1}
                                 adjustsFontSizeToFit
-                                style={{ fontSize: 25 }} > Martes </Text>
-                            <Text style={{ fontSize: 18, marginBottom: 10 }} > 10 - May </Text>
+                                style={{ fontSize: 25 }} >Martes</Text>
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnCuadrado}>
+                    <TouchableOpacity style={styles.btnCuadrado}
+                        onPress={() => navigation.navigate('StackNavigationDia',
+                            {
+                                nombre: 'Miércoles'
+                            }
+                        )}
+                    >
                         <View>
                             <Text
                                 numberOfLines={1}
                                 adjustsFontSizeToFit
-                                style={{ fontSize: 25 }} > Miercoles </Text>
-                            <Text style={{ fontSize: 18, marginBottom: 10 }} > 11 - May </Text>
+                                style={{ fontSize: 25 }} >Miércoles</Text>
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnCuadrado}>
+                    <TouchableOpacity style={styles.btnCuadrado}
+                        onPress={() => navigation.navigate('StackNavigationDia',
+                            {
+                                nombre: 'Jueves'
+                            }
+                        )}
+                    >
                         <View>
                             <Text
                                 numberOfLines={1}
                                 adjustsFontSizeToFit
-                                style={{ fontSize: 25 }} > Jueves </Text>
-                            <Text style={{ fontSize: 18, marginBottom: 10 }} > 12 - May </Text>
+                                style={{ fontSize: 25 }} >Jueves</Text>
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnCuadrado}>
+                    <TouchableOpacity style={styles.btnCuadrado}
+                        onPress={() => navigation.navigate('StackNavigationDia',
+                            {
+                                nombre: 'Viernes'
+                            }
+                        )}
+                    >
                         <View>
                             <Text
                                 numberOfLines={1}
                                 adjustsFontSizeToFit
-                                style={{ fontSize: 25 }} > Viernes </Text>
-                            <Text style={{ fontSize: 18, marginBottom: 10 }} > 13 - May </Text>
+                                style={{ fontSize: 25 }} >Viernes</Text>
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnCuadrado}>
+                    <TouchableOpacity style={styles.btnCuadrado}
+                        onPress={() => navigation.navigate('StackNavigationDia',
+                            {
+                                nombre: 'Sábado'
+                            }
+                        )}
+                    >
                         <View>
                             <Text
                                 numberOfLines={1}
                                 adjustsFontSizeToFit
-                                style={{ fontSize: 25 }} > Sabado </Text>
-                            <Text style={{ fontSize: 18, marginBottom: 10 }} > 14 - May </Text>
+                                style={{ fontSize: 25 }} >Sábado</Text>
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnCuadrado}>
+                    <TouchableOpacity style={styles.btnCuadrado}
+                        onPress={() => navigation.navigate('StackNavigationDia',
+                            {
+                                nombre: 'Domingo'
+                            }
+                        )}
+                    >
                         <View>
                             <Text
                                 numberOfLines={1}
                                 adjustsFontSizeToFit
-                                style={{ fontSize: 25 }} > Domingo </Text>
-                            <Text style={{ fontSize: 18, marginBottom: 10 }} > 15 - May </Text>
+                                style={{ fontSize: 25 }} >Domingo</Text>
                         </View>
                     </TouchableOpacity>
 

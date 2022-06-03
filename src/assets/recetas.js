@@ -84,50 +84,50 @@ export const bebidas = [
     },
     {
         'nombre': 'Agua de mango, coco y chía',
-        'ingredientes': ['2 Tazas Mango congelado', '1 1/2 cup CARNATION CLAVEL Origen Coco', '1/2 Taza Azúcar', '3 Tazas Agua', '2 Cucharadas Chía', '5 Piezas Hielo'],
-        'pasos': ['Licúa el mango, el Alimento Líquido CARNATION CLAVEL en Balance Origen coco y el azúcar.', 'En una jarra con hielos, agrega la mezcla anterior, el agua y la chía', 'Mezcla, sirve en vasos y ofrece.'],
+        'ingredientes': ['2 Tazas Mango congelado', '1 1/2 cup carnation clavel Origen Coco', '1/2 Taza Azúcar', '3 Tazas Agua', '2 Cucharadas Chía', '5 Piezas Hielo'],
+        'pasos': ['Licúa el mango, el Alimento Líquido carnation clavel en Balance Origen coco y el azúcar.', 'En una jarra con hielos, agrega la mezcla anterior, el agua y la chía', 'Mezcla, sirve en vasos y ofrece.'],
         'tipo': 'Bebida'
     },
     {
         'nombre': 'Bebida fría matcha-café',
-        'ingredientes': ['75 Gramos Chocolate blanco', '3/4 Taza Leche Evaporada CARNATION CLAVEL', '1 Sobre Té verde molido, matcha', '1 Cucharada Café 100% Puro Soluble Descafeinado NESCAFÉ DECAF', '1 Taza Hielo'],
-        'pasos': ['Calienta la Leche Evaporada CARNATION CLAVEL, agrega el chocolate blanco y mezcla hasta fundir por completo, retira del fuego; licúa la mezcla anterior con el té verde molido y reserva.', 'Aparte licúa la Leche Evaporada CARNATION CLAVEL con el Café 100% Puro NESCAFÉ DECAF. Reserva.', 'Coloca un poco de hielos en un vaso y llena hasta la mitad con la mezcla de té verde y termina de llenar con la mezcla de café.'],
+        'ingredientes': ['75 Gramos Chocolate blanco', '3/4 Taza Leche Evaporada carnation clavel', '1 Sobre Té verde molido, matcha', '1 Cucharada Café 100% Puro Soluble Descafeinado nescafé decaf', '1 Taza Hielo'],
+        'pasos': ['Calienta la Leche Evaporada carnation clavel, agrega el chocolate blanco y mezcla hasta fundir por completo, retira del fuego; licúa la mezcla anterior con el té verde molido y reserva.', 'Aparte licúa la Leche Evaporada carnation clavel con el Café 100% Puro nescafé decaf. Reserva.', 'Coloca un poco de hielos en un vaso y llena hasta la mitad con la mezcla de té verde y termina de llenar con la mezcla de café.'],
         'tipo': 'Bebida'
     },
     {
         'nombre': 'Atole de guayaba ligero',
-        'ingredientes': ['1 Lata Leche Evaporada CARNATION CLAVEL en Balance Reducida en Grasa*', '1 Lata LA LECHERA en Balance Sin Grasa*', '4 Tazas Agua', '8 Piezas Guayaba sin semillas y cortadas en trozos', '2 Cucharadas Fécula de maíz disuelta en 1 taza de agua', '1 Pieza Canela en raja'],
-        'pasos': ['Licúa la Leche Evaporada CARNATION CLAVEL 80 % Menos Grasa* con la Leche Condensada LA LECHERA Light**, el agua, la guayaba y la fécula de maíz.', 'Calienta con la raja de canela durante 10 minutos o hasta que espese ligeramente. Sirve, decora con la canela y ofrece.'],
+        'ingredientes': ['1 Lata Leche Evaporada carnation clavel en Balance Reducida en Grasa*', '1 Lata la lechera en Balance Sin Grasa*', '4 Tazas Agua', '8 Piezas Guayaba sin semillas y cortadas en trozos', '2 Cucharadas Fécula de maíz disuelta en 1 taza de agua', '1 Pieza Canela en raja'],
+        'pasos': ['Licúa la Leche Evaporada carnation clavel 80 % Menos Grasa* con la Leche Condensada la lechera Light**, el agua, la guayaba y la fécula de maíz.', 'Calienta con la raja de canela durante 10 minutos o hasta que espese ligeramente. Sirve, decora con la canela y ofrece.'],
         'tipo': 'Bebida'
     },
     {
         'nombre': 'Pozol de chocolate',
-        'ingredientes': ['6 Tazas Agua', '1 Pieza Canela una rama', '1 Lata Leche Condensada LA LECHERA', '270 Gramos Chocolate para mesa ABUELITA granulado', '8 Tazas Agua'],
-        'pasos': ['Calienta el agua con el maíz y la canela hasta que comience a hervir; retira y deja enfriar. Licúa con la Leche Condensada LA LECHERA, el Chocolate amargo y 4 tazas de agua. Mezcla con el resto del agua y sirve en vasos altos con hielo.'],
+        'ingredientes': ['6 Tazas Agua', '1 Pieza Canela una rama', '1 Lata Leche Condensada la lechera', '270 Gramos Chocolate para mesa ABUELITA granulado', '8 Tazas Agua'],
+        'pasos': ['Calienta el agua con el maíz y la canela hasta que comience a hervir; retira y deja enfriar. Licúa con la Leche Condensada la lechera, el Chocolate amargo y 4 tazas de agua. Mezcla con el resto del agua y sirve en vasos altos con hielo.'],
         'tipo': 'Bebida'
     },
     {
         'nombre': 'Malteada choco plátano',
-        'ingredientes': ['1 Cucharada Café 100 % puro soluble NESCAFÉ CLÁSICO', '1 Lata Leche Evaporada CARNATION CLAVEL', '1/2 Taza Agua', '4 Unidades Helado de chocolate bolas', '1/2 Cucharadita Canela molida'],
-        'pasos': ['Licúa el Café 100% Puro Soluble NESCAFÉ CLÁSICO con el plátano, la Leche Evaporada CARNATION CLAVEL, el agua, el helado y la canela.', 'Sirve en vasos, decora con crema batida y canela.', 'Ofrece.'],
+        'ingredientes': ['1 Cucharada Café 100 % puro soluble nescafé clásico', '1 Lata Leche Evaporada carnation clavel', '1/2 Taza Agua', '4 Unidades Helado de chocolate bolas', '1/2 Cucharadita Canela molida'],
+        'pasos': ['Licúa el Café 100% Puro Soluble nescafé clásico con el plátano, la Leche Evaporada carnation clavel, el agua, el helado y la canela.', 'Sirve en vasos, decora con crema batida y canela.', 'Ofrece.'],
         'tipo': 'Bebida'
     },
     {
         'nombre': 'Atole de Zarzamora',
-        'ingredientes': ['300 Gramos de Zarzamora', '2 Cucharadas de Fécula de maíz', '5 Tazas de Agua', '1 Taza de Alimento en Polvo CARNATION CLAVEL', '1 Lata Leche Condensada LA LECHERA'],
-        'pasos': ['Licúa la zarzamora con la fécula de maíz, el agua y el Alimento en Polvo CARNATION CLAVEL y la Leche Condensada LA LECHERA.', 'Calienta la mezcla y cocina hasta que espese ligeramente.', 'Sirve y disfruta.'],
+        'ingredientes': ['300 Gramos de Zarzamora', '2 Cucharadas de Fécula de maíz', '5 Tazas de Agua', '1 Taza de Alimento en Polvo carnation clavel', '1 Lata Leche Condensada la lechera'],
+        'pasos': ['Licúa la zarzamora con la fécula de maíz, el agua y el Alimento en Polvo carnation clavel y la Leche Condensada la lechera.', 'Calienta la mezcla y cocina hasta que espese ligeramente.', 'Sirve y disfruta.'],
         'tipo': 'Bebida'
     },
     {
         'nombre': 'Agua de frutas deslactosada',
-        'ingredientes': ['1 Lata CARNATION CLAVEL en Balance Deslactosado', '1 Lata Leche Condensada LA LECHERA en Balance Deslactosada', '1 Cucharadita Esencia de vainilla', '4 Tazas Agua NESTLÉ PUREZA VITAL', '2 Piezas Manzana gala cortadas en cubos pequeños', '15 Piezas Fresa desinfectadas y cortadas en cubos', '100 Gramos Uvas roja, cortada en mitades'],
-        'pasos': ['Licúa la lata de CARNATION CLAVEL Deslactosado con la Leche Condensada LA LECHERA Deslactosada, la esencia de vainilla y la mitad del agua.', 'Sirve la bebida en una jarra, agrega la fruta y el agua restante, mezcla y refrigera.'],
+        'ingredientes': ['1 Lata carnation clavel en Balance Deslactosado', '1 Lata Leche Condensada la lechera en Balance Deslactosada', '1 Cucharadita Esencia de vainilla', '4 Tazas Agua nestlé pureza vital', '2 Piezas Manzana gala cortadas en cubos pequeños', '15 Piezas Fresa desinfectadas y cortadas en cubos', '100 Gramos Uvas roja, cortada en mitades'],
+        'pasos': ['Licúa la lata de carnation clavel Deslactosado con la Leche Condensada la lechera Deslactosada, la esencia de vainilla y la mitad del agua.', 'Sirve la bebida en una jarra, agrega la fruta y el agua restante, mezcla y refrigera.'],
         'tipo': 'Bebida'
     },
     {
         'nombre': 'Agua de mazapán',
-        'ingredientes': ['2/3 Taza de Leche Condensada LA LECHERA', '1 Lata de Leche Evaporada CARNATION CLAVEL (1 1/2 tazas)', '4 Mazapanes (28 g c/u)', '4 Tazas de Agua fría', '2 Tazas de Hielo'],
-        'pasos': ['Licúa la Leche Condensada LA LECHERA, la Leche Evaporada CARNATION CLAVEL y los mazapanes.', 'Vierte lo que licuaste en una jarra, agrega el agua y mezcla. Refrigera.', 'Sirve en un vaso con hielo.'],
+        'ingredientes': ['2/3 Taza de Leche Condensada la lechera', '1 Lata de Leche Evaporada carnation clavel (1 1/2 tazas)', '4 Mazapanes (28 g c/u)', '4 Tazas de Agua fría', '2 Tazas de Hielo'],
+        'pasos': ['Licúa la Leche Condensada la lechera, la Leche Evaporada carnation clavel y los mazapanes.', 'Vierte lo que licuaste en una jarra, agrega el agua y mezcla. Refrigera.', 'Sirve en un vaso con hielo.'],
         'tipo': 'Bebida'
     },
 ]

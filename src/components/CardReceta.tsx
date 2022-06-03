@@ -7,13 +7,14 @@ interface Props {
     nombre: string;
     color?: string;
     onpress: any;
+    newStyles?: object
 }
 
-const CardReceta = ({ nombre, color='#95B665', onpress }: Props) => {
+const CardReceta = ({ nombre, color = '#95B665', onpress, newStyles={} }: Props) => {
     return (
-        <TouchableOpacity 
-        style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor:color }}
-        onPress={onpress}
+        <TouchableOpacity
+            style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: color, ...newStyles }}
+            onPress={onpress}
         >
             <View>
                 <Text
