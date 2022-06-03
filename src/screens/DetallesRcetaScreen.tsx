@@ -1,59 +1,88 @@
 import React from 'react';
 import { styles } from '../theme/appTheme';
-import { FlatList, ScrollView, Text, View } from 'react-native';
+import { FlatList, ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
 
-interface Props {
-    nombre: string;
-    tipo: string;
-    ingredientes: any;
-    pasos: any;
+interface RouteParams {
+    nombre?: string;
+    tipo?: string;
+    ingredientes?: any;
+    pasos?: any;
 }
 
+interface Props extends StackScreenProps<any, any> { }
+
 const DetallesRcetaScreen = ({
-    nombre = 'Titulo Receta',
-
-    tipo = 'Tipo',
-
-    ingredientes = ['a',
-     'b',
-     'c'],
-    pasos = ['z',
-     'x',
-     'y']
+    navigation,
+    route
 }: Props) => {
+
+
+
+    const params = route.params as RouteParams;
+
     return (
         <View style={styles.principalContainer}>
 
-            <View style={{ borderBottomWidth: 1, borderStyle: 'solid',
-             borderBottomColor: '#000' }}>
-                <Text style={styles.textoCabecera} > {nombre} </Text>
-                <Text style={styles.subTexto} > {tipo} </Text>
+            <View style={{
+                borderBottomWidth: 1, borderStyle: 'solid',
+                borderBottomColor: '#000'
+            }}>
+                <TouchableOpacity
+                    style={styles.btnRedondo}
+                    onPress={() => navigation.popToTop()}
+                >
+                    <View>
+                        <Text
+                            adjustsFontSizeToFit
+                            style={{ fontSize:40, fontWeight:'800' , color: 'black', marginBottom: 0 }} >{'←'} </Text>
+                    </View>
+                </TouchableOpacity>
+                <Text style={{...styles.textoCabecera, marginTop:0}} > {params.nombre} </Text>
+                <Text style={styles.subTexto} > {params.tipo} </Text>
             </View>
 
-            <View style={{ height: '100%',
-             paddingBottom: 120 }}>
+            <View style={{
+                height: '100%',
+                paddingBottom: 120
+            }}>
                 <ScrollView style={{}}>
                     <View >
-                        <Text style={{ marginVertical: 10, color: '#C95244',
-                         fontSize: 28, fontWeight: '300' }}
+                        <Text style={{
+                            marginVertical: 10, color: '#C95244',
+                            fontSize: 28, fontWeight: '300'
+                        }}
                         >Ingredientes</Text>
-                        <FlatList
-                            data={ingredientes}
-                            renderItem={({ item }) => <Text style={{ color: 'black',
-                             fontSize: 22 }}
-                            > ▸ {item}</Text>}
-                        />
+
+                        {params.ingredientes.map((elem: string, index: number) => (
+                            <Text
+                                style={{
+                                    color: 'black',
+                                    fontSize: 22,
+                                    textAlign: 'justify'
+
+                                }}
+                                key={index}>▸ {elem}</Text>))}
+
                     </View>
                     <View >
-                        <Text style={{ marginVertical: 10, color: '#C95244',
-                         fontSize: 28, fontWeight: '300' }}
+                        <Text style={{
+                            marginVertical: 10, color: '#C95244',
+                            fontSize: 28, fontWeight: '300'
+                        }}
                         >Instrucciones</Text>
-                        <FlatList
-                            data={pasos}
-                            renderItem={({ item,index }) => <Text style={{ color: 'black',
-                             fontSize: 22 }}
-                            >{index+1}. {item} {'\n'}</Text>}
-                        />
+
+
+                        {params.pasos.map((elem: string, index: number) => (
+                            <Text
+                                style={{
+                                    color: 'black',
+                                    fontSize: 22,
+                                    textAlign: 'justify'
+                                }}
+                                key={index}>{index + 1}. {elem} {'\n'}</Text>))}
+
+
                     </View>
                 </ScrollView>
             </View>

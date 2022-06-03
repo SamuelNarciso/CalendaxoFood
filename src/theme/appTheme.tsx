@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
 
     },
     contenedorItems: {
-         marginTop: 8,
+        marginTop: 8,
         width: '100%',
         height: 170,
     },
@@ -69,11 +69,22 @@ export const styles = StyleSheet.create({
         elevation: 5,
 
     },
-    calendario:{
-    backgroundColor: '#A76D60', 
-    width: '100%',
-    height: '32%',
-    borderRadius:6,
-    marginTop:20
+    btnRedondo: {
+        borderRadius: 100,
+        width: 40,
+        height:40,
+        backgroundColor: '#FFDB25',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        paddingBottom: 10,
+        paddingLeft:8
+
+    },
+    calendario: {
+        backgroundColor: '#A76D60',
+        width: '100%',
+        height: '32%',
+        borderRadius: 6,
+        marginTop: 20
     }
 })

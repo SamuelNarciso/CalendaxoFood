@@ -193,73 +193,133 @@ export const almuerzos = [{
     "tipo": "Almuerzo"
 }]
 
-export const postres =[
+export const postres = [
     {
-    "nombre" : "Cheesecake cookie",
-    "ingredientes": ["146g de harina", "80g de mantequilla", "49g de polvo Hersheys", "1 huevo", "45g de queso crema", "45g de azúcar", "5g de extracto de vainilla", "1g de bicarbonato de sodio", "1g de sal", "105g de barra de chocolate Hershey’s cookies n creme", "73g de chispas de chocolate"],
-    "pasos": ["Precalentar el horno a 180°C.", "En batidora con accesorio de pala, batir a velocidad media la mantequilla y queso crema a temperatura ambiente con el azúcar y el Polvo Hershey’s Cookies ‘n’ Creme por 5 minutos hasta integrar todo por completo.", "Agregar el huevo y extracto de vainilla y batir por 3 minutos.", "Incorporar la harina, sal y bicarbonato y continuar batiendo por 5 minutos más.", "Retirar de la batidora e incorporar con ayuda de una espátula las Chispas Hershey’s Cookies ‘n’ Creme junto con la Barra Hershey’s Cookies ‘n’ Creme previamente troceada.", "Hacer bolitas de 50 g y colocar en una charola con separación de 5 cm entre cada una.", "Hornear por 10 minutos.", "Dejar enfriar por completo."],
-    "tipo": "Postre"
+        "nombre": "Cheesecake cookie",
+        "ingredientes": ["146g de harina", "80g de mantequilla", "49g de polvo Hersheys", "1 huevo", "45g de queso crema", "45g de azúcar", "5g de extracto de vainilla", "1g de bicarbonato de sodio", "1g de sal", "105g de barra de chocolate Hershey’s cookies n creme", "73g de chispas de chocolate"],
+        "pasos": ["Precalentar el horno a 180°C.", "En batidora con accesorio de pala, batir a velocidad media la mantequilla y queso crema a temperatura ambiente con el azúcar y el Polvo Hershey’s Cookies ‘n’ Creme por 5 minutos hasta integrar todo por completo.", "Agregar el huevo y extracto de vainilla y batir por 3 minutos.", "Incorporar la harina, sal y bicarbonato y continuar batiendo por 5 minutos más.", "Retirar de la batidora e incorporar con ayuda de una espátula las Chispas Hershey’s Cookies ‘n’ Creme junto con la Barra Hershey’s Cookies ‘n’ Creme previamente troceada.", "Hacer bolitas de 50 g y colocar en una charola con separación de 5 cm entre cada una.", "Hornear por 10 minutos.", "Dejar enfriar por completo."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Trufa de cava y frambuesa",
-    "ingredientes": ["100 de chocolate negro", "80ml de nata liquida", "30ml de cava", "25g de azúcar glass", "5g de mantequilla", "25g de frambuesas deshidratadas"],
-    "pasos": ["Calentamos la nata junto al azúcar hasta que hierva.", "En un cuenco troceamos el chocolate y vertemos la nata caliente por encima mientras removemos con unas varillas para que el chocolate se deshaga completamente.", "Agregamos la mantequilla y el cava mezclamos totalmente.", "Vertemos la mezcla en una bandeja, echamos la frambuesa, removemos y refrigeramos hasta que la masa se haya endurecido (cuanta más delgada sea la superficie antes se enfría).", "Una vez tengamos la masa cuajada, hacemos bolitas de igual tamaño con una cuchara y damos forma de bolita perfecta con las manos, teniendo cuidado de no dar mucho calor a la masa.", "Por último rebozamos cada trufa en lo que prefiramos: cacao en polvo, virutas, bolitas de anís, etc. Refrigeramos hasta el momento de tomar en un recipiente hermético o túper para que el chocolate no se humedezca."],
-    "tipo": "Postre"
+        "nombre": "Trufa de cava y frambuesa",
+        "ingredientes": ["100 de chocolate negro", "80ml de nata liquida", "30ml de cava", "25g de azúcar glass", "5g de mantequilla", "25g de frambuesas deshidratadas"],
+        "pasos": ["Calentamos la nata junto al azúcar hasta que hierva.", "En un cuenco troceamos el chocolate y vertemos la nata caliente por encima mientras removemos con unas varillas para que el chocolate se deshaga completamente.", "Agregamos la mantequilla y el cava mezclamos totalmente.", "Vertemos la mezcla en una bandeja, echamos la frambuesa, removemos y refrigeramos hasta que la masa se haya endurecido (cuanta más delgada sea la superficie antes se enfría).", "Una vez tengamos la masa cuajada, hacemos bolitas de igual tamaño con una cuchara y damos forma de bolita perfecta con las manos, teniendo cuidado de no dar mucho calor a la masa.", "Por último rebozamos cada trufa en lo que prefiramos: cacao en polvo, virutas, bolitas de anís, etc. Refrigeramos hasta el momento de tomar en un recipiente hermético o túper para que el chocolate no se humedezca."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Brownie",
-    "ingredientes": ["300g de nutella", "2 huevos medianos", "65g de harina de trigo"],
-    "pasos": ["A la Nutella le agregamos los huevos y batimos bien hasta que no se noten restos de estos últimos.", "No necesitamos de nada más que de un tenedor, pero si tenemos unas varillas y las queremos usar, mejor que mejor.", "A esta masa le añadimos la harina de trigo y removemos de nuevo hasta homogeneizar.", "Engrasamos un molde para tartaletas o cupcakes y repartimos la masa entre sus cavidades, sin llegar hasta el borde.", "A pesar de no llevar impulsor, la masa crece ligeramente y no queremos que se desborde. ", "Cocemos en horno pre-calentado a 180 ºC durante 10-15 minutos, según gustos. Retiramos y dejamos atemperar antes de desmoldar."],
-    "tipo": "Postre"
+        "nombre": "Brownie",
+        "ingredientes": ["300g de nutella", "2 huevos medianos", "65g de harina de trigo"],
+        "pasos": ["A la Nutella le agregamos los huevos y batimos bien hasta que no se noten restos de estos últimos.", "No necesitamos de nada más que de un tenedor, pero si tenemos unas varillas y las queremos usar, mejor que mejor.", "A esta masa le añadimos la harina de trigo y removemos de nuevo hasta homogeneizar.", "Engrasamos un molde para tartaletas o cupcakes y repartimos la masa entre sus cavidades, sin llegar hasta el borde.", "A pesar de no llevar impulsor, la masa crece ligeramente y no queremos que se desborde. ", "Cocemos en horno pre-calentado a 180 ºC durante 10-15 minutos, según gustos. Retiramos y dejamos atemperar antes de desmoldar."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Bolitas de coco con chocolate",
-    "ingredientes": ["250g de coco rallado", "pizca de sal", "200g de crême fraîche", "150g de chocolate con leche", "30ml de agua"],
-    "pasos": ["Vamos a mezclar todos los ingredientes secos, es decir la harina blanca, el coco rallado y media cucharita de sal. ", "Cuando estén bien integrados les gregamos la crême fraîche y revolvemos muy bien hasta obtener una consistencia similar a una pasta.", "Con un par de cucharitas vamos ahora a formar unas bolitas de unos cuatro o cinco centímetros de diámetro.", "Las ponemos entonces sobre una bandeja para horno previamente recubierta de papel antiadherente.", "Colocamos en el horno caliente a 180ºC, por unos 25 minutos. Cuando las bolitas de coco estén listas las retiramos del horno y dejamos enfriar unos minutos.", "Mientas tanto rompemos el chocolate en trocitos que ponemos en el microondas con las dos cucharadas de agua por unos 20 segundos.", "Retiramos del horno mezclamos y volvemos a calentar unos 10 segundos más.", "Recubrimos cada bolita con el chocolate derretido y dejamos enfriar antes de servir."],
-    "tipo": "Postre"
+        "nombre": "Bolitas de coco con chocolate",
+        "ingredientes": ["250g de coco rallado", "pizca de sal", "200g de crême fraîche", "150g de chocolate con leche", "30ml de agua"],
+        "pasos": ["Vamos a mezclar todos los ingredientes secos, es decir la harina blanca, el coco rallado y media cucharita de sal. ", "Cuando estén bien integrados les gregamos la crême fraîche y revolvemos muy bien hasta obtener una consistencia similar a una pasta.", "Con un par de cucharitas vamos ahora a formar unas bolitas de unos cuatro o cinco centímetros de diámetro.", "Las ponemos entonces sobre una bandeja para horno previamente recubierta de papel antiadherente.", "Colocamos en el horno caliente a 180ºC, por unos 25 minutos. Cuando las bolitas de coco estén listas las retiramos del horno y dejamos enfriar unos minutos.", "Mientas tanto rompemos el chocolate en trocitos que ponemos en el microondas con las dos cucharadas de agua por unos 20 segundos.", "Retiramos del horno mezclamos y volvemos a calentar unos 10 segundos más.", "Recubrimos cada bolita con el chocolate derretido y dejamos enfriar antes de servir."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Trufas de aguacate",
-    "ingredientes": ["1 pieza de aguacate maduro", "80g de chocolate negro para postres", "10g de mantequilla", "cacao en polvo"],
-    "pasos": ["Funde el chocolate negro y la mantequilla en el microondas en tres series de un minuto.", "Abre el aguacate y retira el hueso. Con ayuda de una cuchara, extrae la pulpa y machácala con un tenedor hasta obtener una crema.", "Vierte el chocolate fundido sobre la pulpa de aguacate machacada y trabaja la mezcla hasta que sea homogénea.", "Obtendrás una masa con textura muy ligera imposible de manejar así que lo mejor es meter la masa en el congelador durante unos 45 minutos.", "Pasado ese tiempo, retira la mezcla del congelador y forma las trufas haciendo bolas con cucharas o con las manos.", "Rebózalas después con el cacao puro en polvo para obtener su aspecto habitual.", "Guarda las trufas en la nevera si nos las vas a comer en el momento, aguantan un par de días en buen estado."],
-    "tipo": "Postre"
+        "nombre": "Trufas de aguacate",
+        "ingredientes": ["1 pieza de aguacate maduro", "80g de chocolate negro para postres", "10g de mantequilla", "cacao en polvo"],
+        "pasos": ["Funde el chocolate negro y la mantequilla en el microondas en tres series de un minuto.", "Abre el aguacate y retira el hueso. Con ayuda de una cuchara, extrae la pulpa y machácala con un tenedor hasta obtener una crema.", "Vierte el chocolate fundido sobre la pulpa de aguacate machacada y trabaja la mezcla hasta que sea homogénea.", "Obtendrás una masa con textura muy ligera imposible de manejar así que lo mejor es meter la masa en el congelador durante unos 45 minutos.", "Pasado ese tiempo, retira la mezcla del congelador y forma las trufas haciendo bolas con cucharas o con las manos.", "Rebózalas después con el cacao puro en polvo para obtener su aspecto habitual.", "Guarda las trufas en la nevera si nos las vas a comer en el momento, aguantan un par de días en buen estado."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Bolitas de  albaricoque y naranja",
-    "ingredientes": ["50g de avena", "25g de mantequilla anacardos", "2 cucharadas de cacao en polvo sin azúcar ", "3 orejones picados menudos", "Ralladura de una naranja", "pizca de sal", "100g de semillas de sésamo tostadas"],
-    "pasos": ["Ponemos la avena en un procesador de alimentos y trituramos hasta obtener una harina gruesa.", "En un bol mezclamos la mantequilla de anacardos con la miel.", "Añadimos el cacao en polvo y mezclamos bien.", "Añadimos la avena, los albaricoques picados, la ralladura de naranja y la sal y trabajamos con las manos hasta que esté todo unido.", "Guardamos la mezcla diez minutos en la nevera. Formamos bolas y las rebozamos en sésamo."],
-    "tipo": "Postre"
+        "nombre": "Bolitas de  albaricoque y naranja",
+        "ingredientes": ["50g de avena", "25g de mantequilla anacardos", "2 cucharadas de cacao en polvo sin azúcar ", "3 orejones picados menudos", "Ralladura de una naranja", "pizca de sal", "100g de semillas de sésamo tostadas"],
+        "pasos": ["Ponemos la avena en un procesador de alimentos y trituramos hasta obtener una harina gruesa.", "En un bol mezclamos la mantequilla de anacardos con la miel.", "Añadimos el cacao en polvo y mezclamos bien.", "Añadimos la avena, los albaricoques picados, la ralladura de naranja y la sal y trabajamos con las manos hasta que esté todo unido.", "Guardamos la mezcla diez minutos en la nevera. Formamos bolas y las rebozamos en sésamo."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Brigadeiros brasileños",
-    "ingredientes": ["370g de leche condensada", "55g de mantequilla", "2 cucharadas de cacao en polvo", "150g de chocolate negro en virutas"],
-    "pasos": ["Comenzaremos por poner todos los ingredientes en un cazo excepto los fideos de chocolate.", "Calentamos la mezcla y cocemos todo durante 10 minutos, removiendo frecuentemente con una espátula para evitar que se pegue.", "Preparamos una bandeja pequeña o un molde y lo engrasamos con los 15 gramos de mantequilla.", "Una vez que haya pasado el tiempo de cocción, volcamos la masa de brigadeiros en el molde, tapamos con papel film y dejamos enfriar en la nevera toda la noche o bien podemos acelerar el proceso poniéndola durante tres horas en el congelador.", "Una vez sólida la masa, hacemos unas bolitas como de 15 a 20 gramos y las rebozamos con los fideos de chocolate.", "Las volvemos a la nevera hasta la hora de tomarlas."],
-    "tipo": "Postre"
+        "nombre": "Brigadeiros brasileños",
+        "ingredientes": ["370g de leche condensada", "55g de mantequilla", "2 cucharadas de cacao en polvo", "150g de chocolate negro en virutas"],
+        "pasos": ["Comenzaremos por poner todos los ingredientes en un cazo excepto los fideos de chocolate.", "Calentamos la mezcla y cocemos todo durante 10 minutos, removiendo frecuentemente con una espátula para evitar que se pegue.", "Preparamos una bandeja pequeña o un molde y lo engrasamos con los 15 gramos de mantequilla.", "Una vez que haya pasado el tiempo de cocción, volcamos la masa de brigadeiros en el molde, tapamos con papel film y dejamos enfriar en la nevera toda la noche o bien podemos acelerar el proceso poniéndola durante tres horas en el congelador.", "Una vez sólida la masa, hacemos unas bolitas como de 15 a 20 gramos y las rebozamos con los fideos de chocolate.", "Las volvemos a la nevera hasta la hora de tomarlas."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Galletas de nutella",
-    "ingredientes": ["180g de nutella", "1 huevo grande", "140g de harina de repostería"],
-    "pasos": ["Procurar que la Nutella y el huevo estén a temperatura ambiente. Precalentar el horno a 160ºC y preparar una bandeja con papel sulfurizado o engrasándola.", "Disponer la Nutella y el huevo en un recipiente mediano y batir un poco con unas varillas o con batidora hasta tener una mezcla homogénea.", "Añadir la harina tamizada y mezclar con suavidad hasta conseguir una masa lisa, suave.", "Tomar porciones del tamaño de una nuez y formar bolitas con las manos.", "Distribuirlas en la bandeja y formar un hueco en el centro con la punta de una cuchara de madera o con un dedo ligeramente humedecido.", "Hornear unos 15 minutos.", "Esperar un poco fuera del horno y trasladar a una rejilla para que se enfríen por completo.", "Decorar llenando los agujeritos con más Nutella, ganaché o con mermelada."],
-    "tipo": "Postre"
+        "nombre": "Galletas de nutella",
+        "ingredientes": ["180g de nutella", "1 huevo grande", "140g de harina de repostería"],
+        "pasos": ["Procurar que la Nutella y el huevo estén a temperatura ambiente. Precalentar el horno a 160ºC y preparar una bandeja con papel sulfurizado o engrasándola.", "Disponer la Nutella y el huevo en un recipiente mediano y batir un poco con unas varillas o con batidora hasta tener una mezcla homogénea.", "Añadir la harina tamizada y mezclar con suavidad hasta conseguir una masa lisa, suave.", "Tomar porciones del tamaño de una nuez y formar bolitas con las manos.", "Distribuirlas en la bandeja y formar un hueco en el centro con la punta de una cuchara de madera o con un dedo ligeramente humedecido.", "Hornear unos 15 minutos.", "Esperar un poco fuera del horno y trasladar a una rejilla para que se enfríen por completo.", "Decorar llenando los agujeritos con más Nutella, ganaché o con mermelada."],
+        "tipo": "Postre"
     },
-    
+
     {
-    "nombre" : "Tarta de chocolate",
-    "ingredientes": ["200g de galletas", "100g de mantequilla a temperatura ambiente", "250g de chocolate negro para postres", "1L de leche entera", "2 sobres de cuajada en polvo", "50g de azucar", "100g de chocolate blanco para decorar"],
-    "pasos": ["Trituramos las galletas dentro de una bolsa de plástico bien cerrada y pasando por encima un rodillo.", "Agregamos la mantequilla a temperatura ambiente o, incluso mejor, ligeramente fundida.", "Mezclamos bien para obtener una masa homogénea.", "Cubrimos la base y laterales de un molde desmoldable de 25 cm, aplastando bien para compactar, y guardamos en la nevera o congelador para que endurezca.", "Mientras tanto preparamos el relleno.", "Picamos el chocolate y lo calentamos en un cacito junto con la leche, los dos sobres de cuajada y el azúcar durante 10 minutos.", "Removemos bien para que no queden grumos.", "Vertemos sobre la base de galletas y dejamos cuajar en la nevera durante cuatro horas aproximadamente.", "Con un pelador hacemos virutas de chocolate blanco y decoramos la tarta en el momento de servir."],
-    "tipo": "Postre"
+        "nombre": "Tarta de chocolate",
+        "ingredientes": ["200g de galletas", "100g de mantequilla a temperatura ambiente", "250g de chocolate negro para postres", "1L de leche entera", "2 sobres de cuajada en polvo", "50g de azucar", "100g de chocolate blanco para decorar"],
+        "pasos": ["Trituramos las galletas dentro de una bolsa de plástico bien cerrada y pasando por encima un rodillo.", "Agregamos la mantequilla a temperatura ambiente o, incluso mejor, ligeramente fundida.", "Mezclamos bien para obtener una masa homogénea.", "Cubrimos la base y laterales de un molde desmoldable de 25 cm, aplastando bien para compactar, y guardamos en la nevera o congelador para que endurezca.", "Mientras tanto preparamos el relleno.", "Picamos el chocolate y lo calentamos en un cacito junto con la leche, los dos sobres de cuajada y el azúcar durante 10 minutos.", "Removemos bien para que no queden grumos.", "Vertemos sobre la base de galletas y dejamos cuajar en la nevera durante cuatro horas aproximadamente.", "Con un pelador hacemos virutas de chocolate blanco y decoramos la tarta en el momento de servir."],
+        "tipo": "Postre"
     },
     {
-    "nombre" : "Flan tradicional",
-    "ingredientes": ["1 taza de leche evaporada", "1 taza de leche condensada", "6 huevos enteros", "1 cucharadita de extracto de vainilla", "6 cucharadas de azúcar ", "1 pizca de manera en polvo", "1 lata de media crema", "y barra de 190g de queso crema"],
-    "pasos": ["Precalienta el horno a 175 ° C.", "En una ollita, coloca el azúcar y calienta a fuego medio hasta que se forme un caramelo; viértelo antes de que se enfríe sobre el molde de flan y reserva.", "Licúa todos los ingredientes hasta que se incorporen muy bien, añade al molde donde ya estará el caramelo frío y duro.", "Mételo al horno en baño María (dentro de otro molde con un poco de agua), cuida que no le entre agua al flan. Si no quieres que se dore, tápalo con papel aluminio.", "Déjalo en el horno por 45 minutos aproximadamente a 170°, y retira hasta que le piques con un cuchillo y este salga limpio. Si en ese momento lo quieres dorar, quita el papel aluminio y deja dorar por 10 minutos. Sácalo y deja enfriar. Refrigéralo y desmóldalo; disfrútalo frío."],
-    "tipo": "Postre"
+        "nombre": "Flan tradicional",
+        "ingredientes": ["1 taza de leche evaporada", "1 taza de leche condensada", "6 huevos enteros", "1 cucharadita de extracto de vainilla", "6 cucharadas de azúcar ", "1 pizca de manera en polvo", "1 lata de media crema", "y barra de 190g de queso crema"],
+        "pasos": ["Precalienta el horno a 175 ° C.", "En una ollita, coloca el azúcar y calienta a fuego medio hasta que se forme un caramelo; viértelo antes de que se enfríe sobre el molde de flan y reserva.", "Licúa todos los ingredientes hasta que se incorporen muy bien, añade al molde donde ya estará el caramelo frío y duro.", "Mételo al horno en baño María (dentro de otro molde con un poco de agua), cuida que no le entre agua al flan. Si no quieres que se dore, tápalo con papel aluminio.", "Déjalo en el horno por 45 minutos aproximadamente a 170°, y retira hasta que le piques con un cuchillo y este salga limpio. Si en ese momento lo quieres dorar, quita el papel aluminio y deja dorar por 10 minutos. Sácalo y deja enfriar. Refrigéralo y desmóldalo; disfrútalo frío."],
+        "tipo": "Postre"
     },
-    ]
+]
+export const cenas = [{
+    "nombre": "Huevos Napoleon",
+    "ingredientes": ["2 huevos XL", "1/2 pimiento rojo", "1 pimiento verde", "1 puerro", "4 rebanadas de pan", "50 gramos de queso Parmesano", "Aceite de oliva virgen extra", "Sal y pimienta al gusto"],
+    "pasos": ["Lavamos y troceamos los pimientos, desechamos las semillas. Lavamos y troceamos la parte blanca del puerro desechando la primera capa exterior.", "Cortamos el pan en tacos pequeños.", "Echamos un buen chorro de aceite en una sartén y cuando esté caliente añadimos el puerro y los pimientos. Salpimentamos y sofreímos 10-12 minutos removiendo de vez en cuando hasta que la verdura esté pochada. Reservamos el sofrito y en el mismo aceite (añadimos un poco más si es necesario) tostamos el pan durante 2-3 minutos.", "Precalentamos el horno a 220º C con calor arriba y abajo. Ponemos en sofrito en una fuete de horno. También podemos usar cazuelas pequeñas individuales. Repartimos el pan tostado sobre el sofrito de verduras.", "Rallamos el queso parmesano encima del pan.", "Hacemos un par de huecos y vertemos los huevos los huevos en ellos. Horneamos hasta que la clara de los huevos esté casi cuajada. Sacamos del horno, las claras acabarán de cuajar con el calor residual. Rallamos un poco más de queso por encima y servimos."],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Ensalada mediterranea",
+    "ingredientes": ["Para la ensalada: 100 g. de mix de lechuga", "6 tomates secos", "Aceitunas negras", "1 lata de anchoas en aceite", "100 g. de mozzarella fresca", "Hierbabuena fresca", "Alcaparras", "Para la vinagreta: 2 partes de aceite de oliva virgen extra", "1 parte de vinagre de vino blanco", "1 diente de ajo", "Sal al gusto"],
+    "pasos": ["Comenzamos por preparar la vinagreta. En un bol, añadimos 2 partes de aceite de oliva virgen extra (50 ml.), 1 parte de vinagre de vino blanco (25 ml.), y un poco de aceite de las anchoas. Mezclamos bien.", "Seguimos ahora troceando la hierba aromática, en este caso hierbabuena. Añadimos ajo picado (o triturado), salamos al gusto y volvemos a mezclar bien. Para que se integren todos los ingredientes. Reservamos algunas hojas de hierbabuena, para decorar al final."],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Crema de verduras",
+    "ingredientes": ["14 espárragos trigueros", "1 cebolla grande", "1 puerro", "2 patatas para cocer", "400 g. de espinacas congeladas", "500 ml. de agua o caldo de verduras", "6 quesitos o queso fresco (también se podría añadir un poco de nata para cocinar)", "Sal y pimienta negra recién molida al gusto", "50 ml. de aceite de oliva virgen extra"],
+    "pasos": ["En una cazuela vertemos un poco de aceite de oliva virgen extra y sofreímos el puerro, los troncos o cuerpo del espárrago y las patatas.", "Pochamos todo durante 5 minutos a fuego medio. Echamos un poco de sal para que suelte parte del agua.", "Añadimos ahora las espinacas congeladas (si fuesen frescas, se haría de igual manera, sólo que hay que lavarlas antes), mezclamos y salteamos todo junto otros 5 minutos. Queremos que se vayan cocinando y ablandando antes de la cocción.", "Vertemos el caldo de verduras o el agua en la cazuela de manera que queden cubiertos todos los ingredientes. Cocemos 15 minutos a fuego alto, echando un vistazo de vez en cuando para que no se nos quede sin líquido y se nos pegue a la cazuela.", "Probamos y salpimentamos al gusto en el momento que comience a hervir. Si vemos que se va a pegar un poco a la cazuela, lo mejor es añadir más líquido y remover todo bien de nuevo."],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Crema de calabaza",
+    "ingredientes": ["600 g de calabaza", "1 puerro grande o dos pequeños", "1 cebolla grande", "2 patatas gallegas", "5 zanahorias medianas", "50 ml de aceite de oliva virgen extra", "Sal fina (al gusto), sal Maldon (para adornar)", "1 litro de agua o de caldo de verduras o ave", "Opcional: 4 g de curry en polvo", "2 g de nuez moscada en polvo"],
+    "pasos": ["Las zanahorias las podemos cortar en trocitos muy pequeños o directamente desmenuzar en la picadora de la batidora. Cuanto más pequeños sean los trozos, más rápido se va a hacer.", "Cortamos en rodajas la calabaza y nos quedamos con dos de ellas en reserva para luego preparar una pequeña guarnición que acompaña la crema. El resto de las rodajas las picamos muy bien o pasamos por la picadora de la batidora de la misma manera que las zanahorias.", "Echamos todo a la cazuela y removemos bien, rehogando durante 15 minutos a fuego medio. Añadimos un litro de agua (si queréis darle más sabor podéis emplear un caldito de verduras o ave) y dejamos cocer hasta que esté todo blando, unos veinte minutos a fuego medio-alto es suficiente.", "Probamos de sal y si hace falta añadimos. Trituramos con la batidora hasta conseguir una textura cremosa. Debe quedar una crema ligeramente espesa. Ya tenemos lista la crema para servir bien caliente."],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Omelet de cebolla",
+    "ingredientes": ["2 cebollas grandes", "4 huevos medianos camperos", "Sal y pimienta negra recién molida (al gusto)", "Aceite de oliva virgen extra (20 ml. para pochar la cebolla y 10 ml. para dorar la tortilla)", "Opciónal: Perejil o cilantro fresco"],
+    "pasos": ["Picamos la cebolla en juliana fina del mismo tamaño. En una sartén amplia, vertemos aceite de oliva virgen extra y calentamos.", "Añadimos la cebolla, salpimentamos al gusto, y dejamos que poche todo junto a fuego medio 15 minutos.", "Una vez se ha pochada toda la cebolla, sin que se queme, la sacamos y la ponemos en un bol. Podéis ayudaros de una espumadera y un colador para evitar añadir más aceite a la tortilla. Reservamos.", "Batimos los huevos y los salamos ligeramente (una pizca bastará). Añadimos la cebolla pochada y mezclamos muy bien.", "Calentamos una sartén antiadherente a fuego medio y agregamos unas gotas de aceite de oliva virgen extra.", "Echamos la mezcla a la sartén y dejamos que se vaya cuajando a fuego medio. La cocinamos por ambos lados y la retiramos cuando adquiera el punto que más nos guste, más o menos cuajada. Mi recomendación es que no la paséis demasiado, se disfruta más de ella si está bien tierna.", "Con cuidado, la pasamos a un plato o fuente y está lista para degustar"],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Huevos revueltos",
+    "ingredientes": ["5 huevos camperos", "1 cucharada colmada de aceite de oliva virgen extra o de mantequilla", "Sal y pimienta negra recién molida al gusto", "Opcional: Cebollino picado o un poquito de perejil fresco"],
+    "pasos": ["Los huevos revueltos no llevan ni cremas, nata, ni leche. Evita que te queden como una sopa de huevo con sabor a lácteo.", "No batas mucho los huevos. Batir estos solo lo suficiente para que se mezclen bien la clara y la yema, con un tenedor en vez de con las varillas para no airear en exceso la mezcla.", "El secreto para preparar unos ricos y deliciosos huevos revueltos a la perfección está en la forma en que se mezclan y revuelven, lo único que necesita es fuego lento y un poquito de paciencia para lograr un buen resultado. Si tenéis prisa y los hacéis a fuego demasiado fuerte o durante demasiado tiempo, os quedarán secos y aburridos.", "Y por último, se deben sazonar una vez que estén hechos, como con los huevos fritos."],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Quiche Lorraine",
+    "ingredientes": ["1 base de masa quebrada o masa brisa de aprox. de 23 cm de diámetro (200 gr.)", "500 g. de crème fraîche (nata fresca o crema de leche). Si no la encontramos podemos usar nata 35% Materia Grasa (nata para montar)", "200 g. de panceta ahumada en lonchas o bacon", "3 huevos", "Nuez moscada y pimienta negra recién molida (al gusto)", "Papel para horno"],
+    "pasos": ["Cortamos la panceta en tiritas y la salteamos en una sartén. No es necesario añadir ni aceite ni mantequilla ya que la panceta tiene bastante grasa y la irá soltando a medida que se vaya cocinando. No es necesario tostarla demasiado, simplemente la doramos un poco y reservamos.", "En un bol echamos las crème freîche o la nata y los huevos previamente batidos y mezclamos bien. Añadimos una pizca de nuez moscada y otra de pimienta negra molida, batimos. Cuando vemos que la panceta está lista la añadimos al bol y removemos para integrar. Vertemos la mezcla sobre la masa prehorneada. Metemos al horno ya caliente a 200º C unos 20 o 25 minutos, hasta que veamos que el huevo está cuajado.", "Comprobamos que la quiche está horneada pinchándola con un palillo. Si sale seco es que ya está. La podemos tomar tanto fría como caliente, pero yo opino que recién salida del horno está en su plenitud."],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Nuggets de pollo",
+    "ingredientes": ["2 pechugas de pollo grandes (500 g. aprox.)", "175 g. de vuestro queso crema preferido", "100 g. de espinacas frescas", "Sal (al gusto)", "Para el rebozado: 2 huevos", "4 cucharadas de harina de trigo", "4 cucharadas de pan rallado", "Aceite de oliva virgen extra suave para freír", "Si son al horno, papel de horno"],
+    "pasos": ["Para obtener unos nuggets más crujientes, mejor que el pan rallado molido podemos usar pan rallado crujiente que venden en cualquier supermercado o gran superficie.", "Para freír nos interesan aceites con alto punto de humo y que sean suaves para no aportar demasiado sabor al pollo.", "Estos aceites nos permitirán freír a alta temperatura, que nos proporcionará un empanado crujiente tras un corto proceso de fritura. Así conseguiremos que el interior quede más jugoso.", "Cuando tengamos todos los nuggets preparados calentamos abundante aceite en una sartén o nuestra freidora. Los vamos friendo en tandas pequeñas.", "Freímos a temperatura media para no bajar en exceso la temperatura del aceite. Es importante que el aceite no esté muy caliente al freírlos. Así evitamos que se queden muy tostados por fuera y crudos por dentro.", "Retiramos a una bandeja con papel de cocina para absorber el aceite sobrante."],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Fajitas de maiz",
+    "ingredientes": ["8 fajitas de maíz", "2 zanahorias", "100 g de tofu ahumado", "Medio manojo de rabanitos para el guacamole", "2 aguacate", "1 cebolleta", "2 tomates maduros", "Zumo de medio limón", "Unas hojas de cilantro fresco", "2 cucharadas de aceite de oliva virgen extra", "Sal"],
+    "pasos": ["Lava las hortalizas, tanto las del guacamole como las del relleno, y empieza por el guacamole.", "Pela y pica la cebolleta y el tomate. Abre los aguacates por la mitad, desecha el hueso y extrae la pulpa. Pícala y mézclala con la cebolleta y el tomate. Aliña con unas gotas de limón, las hojas de cilantro previamente lavadas, secas y picadas, el aceite de oliva virgen extra y sal. Remueve con cuidado hasta emulsionar todos los ingredientes.", "Raspa las zanahorias y córtalas a tiras. Corta los rabanitos a láminas y el tofu, a lonchas.", "Remoja ligeramente con las manos las fajitas y tuéstalas en una plancha muy caliente, 1 minuto por cada lado. Una vez tostadas, úntalas con el guacamole y distribuye por encima el resto de ingredientes. Ciérralas uniendo los dos extremos y ya puedes servirlas"],
+    "tipo": "Cena"
+},
+{
+    "nombre": "Ensalada Cesar",
+    "ingredientes": ["125 g de pechuga de pollo", "400 g de espinacas tiernas", "75 g de queso parmesano", "1 huevo", "1 diente e ajo", "3 cucharadas de zumo de limón", "3 cucharadas de vinagre", "Aceite de oliva virgen extra", "Sal y pimienta negra"],
+    "pasos": ["Pela el ajo y déjalo macerar en 100 ml de aceite durante 3 ó 4 horas. Cuece el huevo en agua salada unos 12 minutos. Refréscalo en agua fría y pélalo. Retira el ajo del aceite y añade el huevo troceado, el vinagre, el zumo de limón y 1 pizca de pimienta. Tritura todo hasta conseguir una salsa homogénea.", "Salpimienta la pechuga de pollo y ásala a la plancha, con unas gotas de aceite, hasta que esté dorada por ambos lados. Luego, córtala en tiras finas. Lava las espinacas, límpialas, escúrrelas y trocéalas. Mezcla ambas y ponlas en una ensaladera. Añade el queso cortado en lascas finas, aliña con la salsa preparada y sirve."],
+    "tipo": "Cena"
+}]    
