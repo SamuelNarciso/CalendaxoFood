@@ -7,13 +7,13 @@ import { StackScreenProps } from '@react-navigation/stack';
 import {
     ScrollView,
     Text,
-    TouchableOpacity,
     View
 } from 'react-native';
 
 interface Props extends StackScreenProps<any, any> { };
 
 const RecetasScreen = ({ navigation }: Props) => {
+
     return (
         <View style={styles.principalContainer} >
             <View style={{ borderBottomWidth: 1, borderStyle: 'solid', borderBottomColor: '#000' }}>
@@ -29,14 +29,9 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {desayunos.map(e => <CardReceta
                                 nombre={e.nombre}
-                                key={e.nombre}
+                                key={e.id}
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
-                                    {
-                                        nombre: e.nombre,
-                                        ingredientes: e.ingredientes,
-                                        pasos: e.pasos,
-                                        tipo: e.tipo
-                                    }
+                                    { idReceta: e.id }
                                 )}
                             />)}
                         </ScrollView>
@@ -48,14 +43,10 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {almuerzos.map(e => <CardReceta
                                 nombre={e.nombre}
-                                key={e.nombre} color='#C95244'
+                                key={e.id} color='#C95244'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
-                                    {
-                                        nombre: e.nombre,
-                                        ingredientes: e.ingredientes,
-                                        pasos: e.pasos,
-                                        tipo: e.tipo
-                                    }
+                                    { idReceta: e.id }
+
                                 )} />)}
                         </ScrollView>
                     </View>
@@ -66,14 +57,10 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {cenas.map(e => <CardReceta
                                 nombre={e.nombre}
-                                key={e.nombre}
+                                key={e.id}
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
-                                    {
-                                        nombre: e.nombre,
-                                        ingredientes: e.ingredientes,
-                                        pasos: e.pasos,
-                                        tipo: e.tipo
-                                    }
+                                    { idReceta: e.id }
+
                                 )} />)}
                         </ScrollView>
                     </View>
@@ -84,15 +71,11 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {bebidas.map(e => <CardReceta
                                 nombre={e.nombre}
-                                key={e.nombre}
+                                key={e.id}
                                 color='#C95244'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
-                                    {
-                                        nombre: e.nombre,
-                                        ingredientes: e.ingredientes,
-                                        pasos: e.pasos,
-                                        tipo: e.tipo
-                                    }
+                                    { idReceta: e.id }
+
                                 )} />)}
                         </ScrollView>
                     </View>
@@ -103,14 +86,10 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {postres.map(e => <CardReceta
                                 nombre={e.nombre}
-                                key={e.nombre}
+                                key={e.id}
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
-                                    {
-                                        nombre: e.nombre,
-                                        ingredientes: e.ingredientes,
-                                        pasos: e.pasos,
-                                        tipo: e.tipo
-                                    }
+                                    { idReceta: e.id }
+
                                 )} />)}
                         </ScrollView>
                     </View>

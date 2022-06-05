@@ -10,15 +10,18 @@ const Stack = createStackNavigator();
 interface Props extends StackScreenProps<any, any> { }
 
 export const StackNavigationDia = ({route}:Props) => {
-    console.log(route)
+
+    console.log(route.params!.dia)
+    
     return (
-        <Stack.Navigator
-            screenOptions={{
+        <Stack.Navigator screenOptions={{
                 headerShown: false
             }}
         >
             <Stack.Screen  name="DiaScreen" component={DiaScreen} />
             <Stack.Screen  name="DetallesRcetaScreen" component={DetallesRcetaScreen} />
+            <Stack.Screen  name="RecetasScreen" component={RecetasScreen} />
+
         </Stack.Navigator>
     );
 }

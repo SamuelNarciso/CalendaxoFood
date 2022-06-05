@@ -2,12 +2,10 @@ import React from 'react';
 import { styles } from '../theme/appTheme';
 import { FlatList, ScrollView, Text, View, TouchableOpacity } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
+import { buscarReceta } from '../assets/recetas';
 
 interface RouteParams {
-    nombre?: string;
-    tipo?: string;
-    ingredientes?: any;
-    pasos?: any;
+    idReceta: string;
 }
 
 interface Props extends StackScreenProps<any, any> { }
@@ -16,10 +14,9 @@ const DetallesRcetaScreen = ({
     navigation,
     route
 }: Props) => {
-
-
-
     const params = route.params as RouteParams;
+
+    const { nombre, ingredientes, pasos, tipo } = buscarReceta(params.idReceta)
 
     return (
         <View style={styles.principalContainer}>
@@ -35,11 +32,11 @@ const DetallesRcetaScreen = ({
                     <View>
                         <Text
                             adjustsFontSizeToFit
-                            style={{ fontSize:40, fontWeight:'800' , color: 'black', marginBottom: 0 }} >{'←'} </Text>
+                            style={{ fontSize: 40, fontWeight: '800', color: 'black', marginBottom: 0 }} >{'←'} </Text>
                     </View>
                 </TouchableOpacity>
-                <Text style={{...styles.textoCabecera, marginTop:0}} > {params.nombre} </Text>
-                <Text style={styles.subTexto} > {params.tipo} </Text>
+                <Text style={{ ...styles.textoCabecera, marginTop: 0 }} > {nombre} </Text>
+                <Text style={styles.subTexto} > {tipo} </Text>
             </View>
 
             <View style={{
@@ -54,7 +51,7 @@ const DetallesRcetaScreen = ({
                         }}
                         >Ingredientes</Text>
 
-                        {params.ingredientes.map((elem: string, index: number) => (
+                        {ingredientes.map((elem: string, index: number) => (
                             <Text
                                 style={{
                                     color: 'black',
@@ -73,7 +70,7 @@ const DetallesRcetaScreen = ({
                         >Instrucciones</Text>
 
 
-                        {params.pasos.map((elem: string, index: number) => (
+                        {pasos.map((elem: string, index: number) => (
                             <Text
                                 style={{
                                     color: 'black',

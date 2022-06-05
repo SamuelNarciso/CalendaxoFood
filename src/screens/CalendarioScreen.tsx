@@ -36,12 +36,7 @@ const CalendarioScreen = ({ navigation }: Props) => {
                         nombre={desayunos[0].nombre}
                         key={desayunos[0].nombre}
                         onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            {
-                                nombre: desayunos[0].nombre,
-                                ingredientes: desayunos[0].ingredientes,
-                                pasos: desayunos[0].pasos,
-                                tipo: desayunos[0].tipo
-                            }
+                            { idReceta: desayunos[0].id }
                         )}
                     />
                     <CardReceta
@@ -49,12 +44,7 @@ const CalendarioScreen = ({ navigation }: Props) => {
                         nombre={almuerzos[0].nombre}
                         key={almuerzos[0].nombre}
                         onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            {
-                                nombre: almuerzos[0].nombre,
-                                ingredientes: almuerzos[0].ingredientes,
-                                pasos: almuerzos[0].pasos,
-                                tipo: almuerzos[0].tipo
-                            }
+                            { idReceta: almuerzos[0].id }
                         )}
                     />
                     <CardReceta
@@ -62,12 +52,8 @@ const CalendarioScreen = ({ navigation }: Props) => {
                         nombre={cenas[0].nombre}
                         key={cenas[0].nombre}
                         onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            {
-                                nombre: cenas[0].nombre,
-                                ingredientes: cenas[0].ingredientes,
-                                pasos: cenas[0].pasos,
-                                tipo: cenas[0].tipo
-                            }
+                            { idReceta: cenas[0].id }
+
                         )}
                     />
                     <CardReceta
@@ -75,12 +61,8 @@ const CalendarioScreen = ({ navigation }: Props) => {
                         nombre={bebidas[0].nombre}
                         key={bebidas[0].nombre}
                         onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            {
-                                nombre: bebidas[0].nombre,
-                                ingredientes: bebidas[0].ingredientes,
-                                pasos: bebidas[0].pasos,
-                                tipo: bebidas[0].tipo
-                            }
+                            { idReceta: bebidas[0].id }
+
                         )}
                     />
                     <CardReceta
@@ -88,12 +70,7 @@ const CalendarioScreen = ({ navigation }: Props) => {
                         nombre={postres[0].nombre}
                         key={postres[0].nombre}
                         onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            {
-                                nombre: postres[0].nombre,
-                                ingredientes: postres[0].ingredientes,
-                                pasos: postres[0].pasos,
-                                tipo: postres[0].tipo
-                            }
+                            { idReceta: postres[0].id }
                         )}
                     />
 
