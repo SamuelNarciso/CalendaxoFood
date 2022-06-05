@@ -7,17 +7,12 @@ import { buscarReceta } from '../assets/recetas';
 import { StackScreenProps } from '@react-navigation/stack';
 import { usuario } from '../assets/usuario';
 
-interface RouteParams {
-    nombre?: string;
-}
 
 
 
 interface Props extends StackScreenProps<any, any> { }
 
 const DiaScreen = ({ navigation, route }: Props) => {
-    // const params = route.params as RouteParams;
-    // console.log( navigation.getParent()?.getState().routes[1].params!.dia  )
     const dia = navigation.getParent()?.getState().routes[1].params!.dia
 
     const { nombre: diaNombre, ...comidas } = usuario.getDatosDia(dia)

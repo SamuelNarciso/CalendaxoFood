@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { styles } from '../theme/appTheme';
 import {
     ScrollView,
@@ -6,13 +6,22 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
-import { bebidas, desayunos, almuerzos, postres, cenas } from '../assets/recetas'
+import { bebidas, desayunos, almuerzos, postres, cenas, buscarReceta } from '../assets/recetas';
 import CardReceta from '../components/CardReceta';
 import { StackScreenProps } from '@react-navigation/stack';
+import { usuario } from '../assets/usuario';
 
 interface Props extends StackScreenProps<any, any> { };
 
 const CalendarioScreen = ({ navigation }: Props) => {
+    const fecha = new Date()
+    const dias = ['D', 'L', 'M', 'X', 'J', 'V', 'S',]
+    const diaActual = dias[fecha.getDay()]
+    const { nombre: diaNombre, ...comidas } = usuario.getDatosDia(diaActual)
+    const listaComidas = Object.keys(comidas)
+
+
+
     return (
         <View style={styles.principalContainer}>
             <View style={{ borderBottomWidth: 1, borderStyle: 'solid', borderBottomColor: '#000' }}>
@@ -20,51 +29,29 @@ const CalendarioScreen = ({ navigation }: Props) => {
 
             </View>
 
-            {/* <View style={styles.calendario}>
 
-            </View> */}
 
             {/* Comidas del dia */}
             <View style={styles.contenedorItems} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Comidas del dia</Text>
                 <ScrollView style={styles.scrollView} horizontal={true}>
 
+                    {listaComidas.map((e, index) => (
+                        <CardReceta
+                            color={(comidas[e]) ? '#7C9D4B' : '#C95244'}
+                            nombre={(comidas[e]) ? buscarReceta(comidas[e]).nombre : `No hay ${e} asignado`}
+                            key={comidas[e] + index}
 
+                            onpress={
+                                (comidas[e]) ?
+                                    () => navigation.navigate('DetallesRcetaScreen', { idReceta: buscarReceta(comidas[e]).id })
+                                    : () => navigation.navigate('RecetasScreen')
+                            }
+                        />
 
-                    <CardReceta
-                        color='#7C9D4B'
-                        nombre={desayunos[0].nombre}
-                        key={desayunos[0].nombre}
-                        onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            { idReceta: desayunos[0].id }
-                        )}
-                    />
-                    <CardReceta
-                        color='#89AE54'
-                        nombre={almuerzos[0].nombre}
-                        key={almuerzos[0].nombre}
-                        onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            { idReceta: almuerzos[0].id }
-                        )}
-                    />
-                    <CardReceta
-                        color='#95B665'
-                        nombre={cenas[0].nombre}
-                        key={cenas[0].nombre}
-                        onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            { idReceta: cenas[0].id }
+                    ))}
 
-                        )}
-                    />
-                    <CardReceta
-                        color='#A1BE76'
-                        nombre={bebidas[0].nombre}
-                        key={bebidas[0].nombre}
-                        onpress={() => navigation.navigate('DetallesRcetaScreen',
-                            { idReceta: bebidas[0].id }
-
-                        )}
-                    />
+                    {/*                     
                     <CardReceta
                         color='#ADC688'
                         nombre={postres[0].nombre}
@@ -72,7 +59,7 @@ const CalendarioScreen = ({ navigation }: Props) => {
                         onpress={() => navigation.navigate('DetallesRcetaScreen',
                             { idReceta: postres[0].id }
                         )}
-                    />
+                    /> */}
 
 
                 </ScrollView>
