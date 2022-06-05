@@ -36,7 +36,7 @@ const DiaScreen = ({ navigation, route }: Props) => {
                     <View>
                         <Text
                             adjustsFontSizeToFit
-                            style={{ fontSize: 40, fontWeight: '800', color: 'black', marginBottom: 0 }} >{'←'} </Text>
+                            style={{ fontSize: 40, fontWeight: '800', color: 'white', marginBottom: 0 }} >{'←'} </Text>
                     </View>
                 </TouchableOpacity>
                 <Text style={{ ...styles.textoCabecera, marginTop: 0, color: 'black' }} >{diaNombre} </Text>
@@ -52,7 +52,7 @@ const DiaScreen = ({ navigation, route }: Props) => {
 
                             <CardReceta
                                 newStyles={{ width: '100%' }}
-                                color={(comidas[e]) ? '#7C9D4B' : '#C95244'}
+                                color={(comidas[e]) ? '#F7B538' : '#f75538'}
                                 nombre={(comidas[e]) ? buscarReceta(comidas[e]).nombre : 'No Asignado'}
                                 key={comidas[e]}
 

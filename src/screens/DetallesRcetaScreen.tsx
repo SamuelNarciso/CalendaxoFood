@@ -60,7 +60,7 @@ const DetallesRcetaScreen = ({
                     <View>
                         <Text
                             adjustsFontSizeToFit
-                            style={{ fontSize: 40, fontWeight: '800', color: 'black', marginBottom: 0 }} >{'←'} </Text>
+                            style={{ fontSize: 40, fontWeight: '800', color: 'white', marginBottom: 0 }} >{'←'} </Text>
                     </View>
                 </TouchableOpacity>
                 <Text style={{ ...styles.textoCabecera, marginTop: 0 }} > {nombre} </Text>

@@ -43,7 +43,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {almuerzos.map(e => <CardReceta
                                 nombre={e.nombre}
-                                key={e.id} color='#C95244'
+                                key={e.id} color='#DB7C26'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
                                     { idReceta: e.id }
 
@@ -72,7 +72,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                             {bebidas.map(e => <CardReceta
                                 nombre={e.nombre}
                                 key={e.id}
-                                color='#C95244'
+                                color='#DB7C26'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
                                     { idReceta: e.id }
 

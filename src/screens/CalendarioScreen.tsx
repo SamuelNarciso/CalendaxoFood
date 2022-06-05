@@ -38,7 +38,7 @@ const CalendarioScreen = ({ navigation }: Props) => {
 
                     {listaComidas.map((e, index) => (
                         <CardReceta
-                            color={(comidas[e]) ? '#7C9D4B' : '#C95244'}
+                            color={(comidas[e]) ? '#F7B538' : '#f75538'}
                             nombre={(comidas[e]) ? buscarReceta(comidas[e]).nombre : `No hay ${e} asignado`}
                             key={comidas[e] + index}
 
@@ -68,18 +68,18 @@ const CalendarioScreen = ({ navigation }: Props) => {
             {/* Proxima comida */}
             <View style={{ ...styles.contenedorItems, height: 400 }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Proxima comida</Text>
-                <ScrollView style={{ ...styles.scrollView, backgroundColor: '#C95244' }} >
+                <ScrollView style={{ ...styles.scrollView, backgroundColor: '#F09D51' }} >
                     {/* <TextInput multiline={true} numberOfLines={100} style={{ color: '#000',fontSize: 24}} > */}
-                    <Text style={{ paddingTop: 10, color: '#FCF5E3', fontSize: 24 }} > Ingrediente 1</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Ingrediente 2</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Ingrediente 3</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Ingrediente 4</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} > Descripcion de receta </Text>
+                    <Text style={{ paddingTop: 10, color: '#fff', fontSize: 24 }} > Ingrediente 1</Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Ingrediente 2</Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Ingrediente 3</Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Ingrediente 4</Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
+                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
                     {/* </TextInput> */}
                 </ScrollView>
             </View>

@@ -95,7 +95,7 @@ const PrincipalScreen = ({ navigation }: Props) => {
                             <View>
                                 <Text
                                     adjustsFontSizeToFit
-                                    style={{ fontSize: 90, textAlign: 'center' }} > {elemento} </Text>
+                                    style={{ fontSize: 90, textAlign: 'center', color:'white' }} > {elemento} </Text>
                             </View>
                         </TouchableOpacity>)
                     }
@@ -106,13 +106,12 @@ const PrincipalScreen = ({ navigation }: Props) => {
             {/* Lista del supermercado*/}
             <View style={{ ...styles.contenedorItems }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >Lista de supermercado</Text>
-                <ScrollView style={{ ...styles.scrollView, paddingHorizontal: 10, backgroundColor: '#95B665' }} >
+                <ScrollView style={{ ...styles.scrollView, paddingHorizontal: 10, backgroundColor: '#FF9505' }} >
 
                     {ingredientes.map((ingrediente, index) => (
                         <Text key={index} style={{ color: '#FCF5E3', fontSize: 24 }} >{ingrediente}</Text>))}
 
-                    {/* <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 10</Text> */}
-                    {/* </TextInput> */}
+    
                 </ScrollView>
             </View>
 

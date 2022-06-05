@@ -18,9 +18,9 @@ function Tabs() {
 
             screenOptions={({ route }) => ({
                 headerShown: false,
-                tabBarActiveTintColor: '#54830F',
+                tabBarActiveTintColor: '#387af7',
                 tabBarStyle: {
-                    backgroundColor: '#E0D0C1',
+                    backgroundColor: '#FFC971',
                 },
                 tabBarIcon: (props) => {
                     let iconName: string = '';

@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     fondo: {
-        backgroundColor: '#FCF5E3',
+        backgroundColor: '#fef5e5',
         flex: 1,
         color: '#000000',
 
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-start',
 
         // backgroundColor: '#FCF5E3',
-        backgroundColor: '#FCF5E3',
+        backgroundColor: '#fef5e5',
         color: '#393534',
         display: 'flex',
     },
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     },
     subTexto: {
         marginTop: 8,
-        color: '#95B665',
+        color: '#387af7',
         textAlign: 'center',
         fontSize: 24
 
@@ -48,12 +48,22 @@ export const styles = StyleSheet.create({
     btnCuadrado: {
 
         borderRadius: 4,
-        backgroundColor: '#95B665',
+        backgroundColor: '#E2711D',
         width: 100,
         // height:100,
         marginRight: 10,
         justifyContent: 'flex-end',
         padding: 10,
+
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     },
     btnRectangular: {
         justifyContent: 'flex-start',
@@ -73,20 +83,14 @@ export const styles = StyleSheet.create({
         borderRadius: 100,
         width: 40,
         height: 40,
-        backgroundColor: '#FFDB25',
+        backgroundColor: '#E2711D',
         textAlign: 'center',
         textAlignVertical: 'center',
         paddingBottom: 10,
         paddingLeft: 8
 
     },
-    calendario: {
-        backgroundColor: '#A76D60',
-        width: '100%',
-        height: '32%',
-        borderRadius: 6,
-        marginTop: 20
-    },
+
 
     botonCirculoPequeno: {
         width: 30,
@@ -95,16 +99,37 @@ export const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 50
+        borderRadius: 50,
+
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
+
     },
     botonCirculoPequenoPresionado: {
         width: 30,
         height: 30,
-        backgroundColor: '#95B665',
+        backgroundColor: '#82abfa',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 50
+        borderRadius: 50,
+
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     },
     textoNoPresionado: {
         color: 'black',
@@ -118,20 +143,3 @@ export const styles = StyleSheet.create({
     }
 
 })
-{/* <TouchableOpacity
-                        key={index + dia}
-                        style={
-                            idsComidas[index]
-                                ? styles.botonCirculoPequenoPresionado
-                                : styles.botonCirculoPequeno
-
-                        }
-                        onPress={() => { asignarComida(dia, index); }}
-                    >
-                        <Text adjustsFontSizeToFit={true}
-                            style={idsComidas[index]
-                                ? styles.textoPresionado
-                                : styles.textoNoPresionado
-                            }
-                        >{dia}</Text>
-                    </TouchableOpacity> */}
