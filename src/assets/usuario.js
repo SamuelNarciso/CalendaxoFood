@@ -1,3 +1,5 @@
+import { buscarReceta } from "./recetas";
+
 class Usuario {
     constructor() {
         this.dias = {
@@ -65,9 +67,63 @@ class Usuario {
     asignarComida(dia, id) {
         const tipo = id.charAt(0);
 
+        switch (tipo) {
+            case 'd':
+                if (this.dias[dia].desayuno == id) {
+                    this.dias[dia].desayuno = null
+                } else { this.dias[dia].desayuno = id }
+                break;
+            case 'a':
+                if (this.dias[dia].almuerzo == id) {
+                    this.dias[dia].almuerzo = null
+                } else { this.dias[dia].almuerzo = id }
+                break;
+            case 'c':
+                if (this.dias[dia].cena == id) {
+                    this.dias[dia].cena = null
+                } else { this.dias[dia].cena = id }
+                break;
+            case 'p':
+                if (this.dias[dia].postre == id) {
+                    this.dias[dia].postre = null
+                } else { this.dias[dia].postre = id }
+                break;
+            case 'b':
+                if (this.dias[dia].bebida == id) {
+                    this.dias[dia].bebida = null
+                } else { this.dias[dia].bebida = id }
+                break;
+
+
+            default:
+                break;
+        }
+
     }
+
     getDatosDia(dia) {
         return this.dias[dia]
+    }
+
+    getIngredientes() {
+        const clavesComida = []
+
+        for (const clave in this.dias) {
+            const cadaDia = this.dias[clave];
+            for (const key in cadaDia) {
+                const element = cadaDia[key];
+                if (key != 'nombre') {
+
+                    element
+                        ? clavesComida.push(element)
+                        : null
+                }
+
+            }
+        }
+
+        const ingredientes = (clavesComida.map(id => buscarReceta(id).ingredientes))
+        return (ingredientes.toString())
     }
 }
 

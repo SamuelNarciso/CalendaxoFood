@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { styles } from '../theme/appTheme';
 import { FlatList, ScrollView, Text, View, TouchableOpacity } from 'react-native';
-import { StackScreenProps } from '@react-navigation/stack';
+import { StackScreenProps, createStackNavigator } from '@react-navigation/stack';
 import { buscarReceta } from '../assets/recetas';
+import { usuario } from '../assets/usuario';
 
 interface RouteParams {
     idReceta: string;
@@ -10,13 +11,39 @@ interface RouteParams {
 
 interface Props extends StackScreenProps<any, any> { }
 
+
 const DetallesRcetaScreen = ({
+
     navigation,
     route
 }: Props) => {
-    const params = route.params as RouteParams;
+    const [idsComidas, setIdsComidas] = useState([]);
+    const [internetCheck, setInternetCheck] = useState(0);
 
-    const { nombre, ingredientes, pasos, tipo } = buscarReceta(params.idReceta)
+    const params = route.params as RouteParams;
+    const { id, nombre, ingredientes, pasos, tipo } = buscarReceta(params.idReceta)
+    const idsDiaComida: any = [] = []
+
+    useEffect(() => {
+        for (const clave in usuario.dias) { idsDiaComida.push(usuario.dias[clave][tipo.toLowerCase()]) }
+        setIdsComidas(idsDiaComida)
+    }, [internetCheck])
+
+
+
+    const asignarComida = (dia: string, index: number) => {
+        let antiguoArr: any = [] = idsComidas;
+        antiguoArr[index] = id
+
+        if (antiguoArr[index] == id) {
+            antiguoArr[index] = null
+        } else { antiguoArr[index] = id }
+
+
+        setIdsComidas(antiguoArr)
+        usuario.asignarComida(dia, id)
+        console.log(idsComidas)
+    }
 
     return (
         <View style={styles.principalContainer}>
@@ -37,10 +64,38 @@ const DetallesRcetaScreen = ({
                 </TouchableOpacity>
                 <Text style={{ ...styles.textoCabecera, marginTop: 0 }} > {nombre} </Text>
                 <Text style={styles.subTexto} > {tipo} </Text>
+
+            </View>
+
+            <Text style={{ ...styles.subTexto, fontSize: 16, color: 'grey' }} >Agregar a</Text>
+            <View style={{ marginTop: 5, display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+
+                {usuario.nombreDias.map((dia, index) => (
+                    <TouchableOpacity
+                        key={index + dia}
+                        style={
+                            (idsComidas[index] && idsComidas[index] == id)
+                                ? styles.botonCirculoPequenoPresionado
+                                : styles.botonCirculoPequeno
+                        }
+                        onPress={() => {
+                            asignarComida(dia, index);
+                            setInternetCheck(internetCheck + 1)
+                        }}
+                    >
+                        <Text adjustsFontSizeToFit={true}
+                            style={
+                                (idsComidas[index] && idsComidas[index] == id)
+                                    ? styles.textoPresionado
+                                    : styles.textoNoPresionado
+                            }
+                        >{dia}</Text>
+                    </TouchableOpacity>
+                ))}
             </View>
 
             <View style={{
-                height: '100%',
+                height: '92%',
                 paddingBottom: 120
             }}>
                 <ScrollView style={{}}>

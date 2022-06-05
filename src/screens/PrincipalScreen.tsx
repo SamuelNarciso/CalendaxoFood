@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { StackScreenProps } from '@react-navigation/stack';
@@ -8,6 +8,13 @@ import { usuario } from '../assets/usuario';
 interface Props extends StackScreenProps<any, any> { };
 
 const PrincipalScreen = ({ navigation }: Props) => {
+    const [ingredientes, setingredientes] = useState([])
+    useEffect(() => {
+        let textoIngredientes = usuario.getIngredientes()
+        const listaIngredientes = textoIngredientes.split(',')
+        setingredientes(listaIngredientes)
+    }, [])
+
 
     return (
         <View style={styles.principalContainer} >
@@ -77,7 +84,7 @@ const PrincipalScreen = ({ navigation }: Props) => {
 
                 <ScrollView style={styles.scrollView} horizontal={true}>
                     {
-                        usuario.nombreDias.map((elemento: string, index) =>  <TouchableOpacity
+                        usuario.nombreDias.map((elemento: string, index) => <TouchableOpacity
                             style={{ ...styles.btnCuadrado, padding: 0, justifyContent: 'center', alignItems: 'center' }}
                             onPress={() => navigation.navigate('StackNavigationDia',
                                 { dia: elemento }
@@ -97,19 +104,13 @@ const PrincipalScreen = ({ navigation }: Props) => {
 
             {/* Lista del supermercado*/}
             <View style={{ ...styles.contenedorItems }} >
-                <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >Lista de supermercado</Text>
-                <ScrollView style={{ ...styles.scrollView, backgroundColor: '#95B665' }} >
-                    {/* <TextInput multiline={true} numberOfLines={100} style={{ color: '#000',fontSize: 24}} > */}
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 1</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 2</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 3</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 4</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 5</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 6</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 7</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 8</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 9</Text>
-                    <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 10</Text>
+                <Text style={{  color: '#000', fontSize: 24, fontWeight: '300' }} >Lista de supermercado</Text>
+                <ScrollView style={{ ...styles.scrollView,paddingHorizontal:10, backgroundColor: '#95B665' }} >
+
+                    {ingredientes.map((ingrediente, index) => (
+                        <Text key={index} style={{ color: '#FCF5E3', fontSize: 24 }} >{ingrediente}</Text>))}
+
+                    {/* <Text style={{ color: '#FCF5E3', fontSize: 24 }} >  Ingrediente 10</Text> */}
                     {/* </TextInput> */}
                 </ScrollView>
             </View>

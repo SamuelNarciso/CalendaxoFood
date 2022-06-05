@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     principalContainer: {
         flex: 1,
         paddingHorizontal: 20,
-         justifyContent: 'flex-start',
+        justifyContent: 'flex-start',
 
         // backgroundColor: '#FCF5E3',
         backgroundColor: '#FCF5E3',
@@ -72,12 +72,12 @@ export const styles = StyleSheet.create({
     btnRedondo: {
         borderRadius: 100,
         width: 40,
-        height:40,
+        height: 40,
         backgroundColor: '#FFDB25',
         textAlign: 'center',
         textAlignVertical: 'center',
         paddingBottom: 10,
-        paddingLeft:8
+        paddingLeft: 8
 
     },
     calendario: {
@@ -86,5 +86,52 @@ export const styles = StyleSheet.create({
         height: '32%',
         borderRadius: 6,
         marginTop: 20
+    },
+
+    botonCirculoPequeno: {
+        width: 30,
+        height: 30,
+        backgroundColor: 'white',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 50
+    },
+    botonCirculoPequenoPresionado: {
+        width: 30,
+        height: 30,
+        backgroundColor: '#95B665',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 50
+    },
+    textoNoPresionado: {
+        color: 'black',
+        fontSize: 24
+
+    },
+
+    textoPresionado: {
+        color: 'white',
+        fontSize: 24
     }
+
 })
+{/* <TouchableOpacity
+                        key={index + dia}
+                        style={
+                            idsComidas[index]
+                                ? styles.botonCirculoPequenoPresionado
+                                : styles.botonCirculoPequeno
+
+                        }
+                        onPress={() => { asignarComida(dia, index); }}
+                    >
+                        <Text adjustsFontSizeToFit={true}
+                            style={idsComidas[index]
+                                ? styles.textoPresionado
+                                : styles.textoNoPresionado
+                            }
+                        >{dia}</Text>
+                    </TouchableOpacity> */}

@@ -20,7 +20,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                 <Text style={styles.textoCabecera} > Recetas </Text>
             </View>
 
-            <View style={{ height: '100%', paddingBottom: 100 }}>
+            <View style={{ height: '100%', paddingBottom: 90 }}>
                 <ScrollView style={{}}>
 
                     {/* Desayunos */}

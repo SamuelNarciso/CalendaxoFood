@@ -19,13 +19,17 @@ const DiaScreen = ({ navigation, route }: Props) => {
     // const params = route.params as RouteParams;
     // console.log( navigation.getParent()?.getState().routes[1].params!.dia  )
     const dia = navigation.getParent()?.getState().routes[1].params!.dia
+
     const { nombre: diaNombre, ...comidas } = usuario.getDatosDia(dia)
+    // console.log(comidas)
+
     const listaComidas = Object.keys(comidas)
 
     return (
 
-        <View style={styles.principalContainer}>
 
+        <View style={styles.principalContainer}>
+            {/* Flecha caquera hacia atras. */}
             <View style={{
                 borderBottomWidth: 1, borderStyle: 'solid',
                 borderBottomColor: '#000'
@@ -43,12 +47,12 @@ const DiaScreen = ({ navigation, route }: Props) => {
                 <Text style={{ ...styles.textoCabecera, marginTop: 0, color: 'black' }} >{diaNombre} </Text>
             </View>
 
-
+            {/* Creador de las comidas */}
             <View style={{ height: '100%', paddingBottom: 100 }}>
                 <ScrollView style={{}}>
 
                     {listaComidas.map(e => (
-                        <View style={{ ...styles.contenedorItems, height: 'auto' }} >
+                        <View style={{ ...styles.contenedorItems, height: 'auto' }} key={e}>
                             <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >{e}</Text>
 
                             <CardReceta
@@ -58,9 +62,9 @@ const DiaScreen = ({ navigation, route }: Props) => {
                                 key={comidas[e]}
 
                                 onpress={
-                                    (true) ?
-                                        () => navigation.navigate('RecetasScreen')
-                                        : () => navigation.navigate('DetallesRcetaScreen', { idReceta: buscarReceta(comidas[e]).id })
+                                    (comidas[e]) ?
+                                        () => navigation.navigate('DetallesRcetaScreen', { idReceta: buscarReceta(comidas[e]).id })
+                                        : () => navigation.navigate('RecetasScreen')
                                 }
                             />
                         </View>
