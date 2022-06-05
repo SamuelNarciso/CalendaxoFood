@@ -87,7 +87,7 @@ const PrincipalScreen = ({ navigation }: Props) => {
                     {
                         usuario.nombreDias.map((elemento: string, index) => <TouchableOpacity
                             style={{ ...styles.btnCuadrado, padding: 0, justifyContent: 'center', alignItems: 'center' }}
-                            onPress={() => navigation.navigate('StackNavigationDia',
+                            onPress={() => navigation.navigate('DiaScreen',
                                 { dia: elemento }
                             )}
                             key={index}

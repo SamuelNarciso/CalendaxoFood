@@ -8,12 +8,17 @@ import { StackScreenProps } from '@react-navigation/stack';
 import { usuario } from '../assets/usuario';
 
 
-
+interface RouteParams {
+    dia: string;
+}
 
 interface Props extends StackScreenProps<any, any> { }
 
 const DiaScreen = ({ navigation, route }: Props) => {
-    const dia = navigation.getParent()?.getState().routes[1].params!.dia
+   
+    const params = route.params as RouteParams;
+
+    const dia = params.dia;
 
     const { nombre: diaNombre, ...comidas } = usuario.getDatosDia(dia)
     // console.log(comidas)
@@ -59,7 +64,7 @@ const DiaScreen = ({ navigation, route }: Props) => {
                                 onpress={
                                     (comidas[e]) ?
                                         () => navigation.navigate('DetallesRcetaScreen', { idReceta: buscarReceta(comidas[e]).id })
-                                        : () => navigation.navigate('RecetasScreen')
+                                        : () => navigation.navigate('StackNavigationRecetas')
                                 }
                             />
                         </View>
