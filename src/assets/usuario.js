@@ -1,4 +1,5 @@
 import { buscarReceta } from "./recetas";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class Usuario {
     constructor() {
@@ -124,6 +125,43 @@ class Usuario {
 
         const ingredientes = (clavesComida.map(id => buscarReceta(id).ingredientes))
         return (ingredientes.toString())
+    }
+
+    asignarDatosDelStorageADias() {
+
+        const getData = async () => {
+            try {
+                const jsonValue = await AsyncStorage.getItem('datos')
+
+                this.dias = JSON.parse(jsonValue);
+                console.log('Datos asignados correctamente')
+            } catch (e) {
+                // error reading value
+            }
+        }
+
+        getData()
+    }
+
+    guardarDatos() {
+
+        const storeData = async () => {
+            try {
+                await AsyncStorage.setItem('datos', JSON.stringify(this.dias));
+                await console.log('Datos guardados')
+            } catch (e) {
+                // saving error
+            }
+        }
+        // const jeison = JSON.stringify(this.dias)
+        // const noJeison=  JSON.parse(jeison)
+        // console.log(typeof jeison)
+        // console.log('--\n\n')
+        // console.log(typeof noJeison)
+
+
+        storeData()
+        this.asignarDatosDelStorageADias()
     }
 }
 

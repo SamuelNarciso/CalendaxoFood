@@ -10,6 +10,7 @@ interface Props extends StackScreenProps<any, any> { };
 const PrincipalScreen = ({ navigation }: Props) => {
     const [ingredientes, setingredientes] = useState([])
     useEffect(() => {
+        usuario.asignarDatosDelStorageADias()
         let textoIngredientes = usuario.getIngredientes()
         const listaIngredientes = textoIngredientes.split(',')
         setingredientes(listaIngredientes)
@@ -104,8 +105,8 @@ const PrincipalScreen = ({ navigation }: Props) => {
 
             {/* Lista del supermercado*/}
             <View style={{ ...styles.contenedorItems }} >
-                <Text style={{  color: '#000', fontSize: 24, fontWeight: '300' }} >Lista de supermercado</Text>
-                <ScrollView style={{ ...styles.scrollView,paddingHorizontal:10, backgroundColor: '#95B665' }} >
+                <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >Lista de supermercado</Text>
+                <ScrollView style={{ ...styles.scrollView, paddingHorizontal: 10, backgroundColor: '#95B665' }} >
 
                     {ingredientes.map((ingrediente, index) => (
                         <Text key={index} style={{ color: '#FCF5E3', fontSize: 24 }} >{ingrediente}</Text>))}

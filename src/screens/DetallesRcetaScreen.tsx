@@ -42,7 +42,8 @@ const DetallesRcetaScreen = ({
 
         setIdsComidas(antiguoArr)
         usuario.asignarComida(dia, id)
-        console.log(idsComidas)
+        // console.log(idsComidas)
+        usuario.guardarDatos()
     }
 
     return (
