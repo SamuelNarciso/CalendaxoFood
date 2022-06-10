@@ -15,7 +15,7 @@ interface RouteParams {
 interface Props extends StackScreenProps<any, any> { }
 
 const DiaScreen = ({ navigation, route }: Props) => {
-   
+
     const params = route.params as RouteParams;
 
     const dia = params.dia;
@@ -24,6 +24,12 @@ const DiaScreen = ({ navigation, route }: Props) => {
     // console.log(comidas)
 
     const listaComidas = Object.keys(comidas)
+
+    const capitalizar = (str: string) => {
+        const low = str.toLowerCase()
+        console.log(str)
+        return (str.charAt(0).toUpperCase() + low.slice(1))
+    }
 
     return (
 
@@ -34,7 +40,7 @@ const DiaScreen = ({ navigation, route }: Props) => {
                 borderBottomWidth: 1, borderStyle: 'solid',
                 borderBottomColor: '#000'
             }}>
-                <TouchableOpacity
+                {/* <TouchableOpacity
                     style={styles.btnRedondo}
                     onPress={() => navigation.popToTop()}
                 >
@@ -43,7 +49,7 @@ const DiaScreen = ({ navigation, route }: Props) => {
                             adjustsFontSizeToFit
                             style={{ fontSize: 40, fontWeight: '800', color: 'white', marginBottom: 0 }} >{'←'} </Text>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <Text style={{ ...styles.textoCabecera, marginTop: 0, color: 'black' }} >{diaNombre} </Text>
             </View>
 
@@ -51,19 +57,20 @@ const DiaScreen = ({ navigation, route }: Props) => {
             <View style={{ height: '100%', paddingBottom: 100 }}>
                 <ScrollView style={{}}>
 
-                    {listaComidas.map(e => (
-                        <View style={{ ...styles.contenedorItems, height: 'auto' }} key={e}>
-                            <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >{e}</Text>
+                    {listaComidas.map(tipoComida => (
+                        <View style={{ ...styles.contenedorItems, height: 'auto' }} key={tipoComida}>
+                            <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >{ capitalizar(tipoComida) }</Text>
 
                             <CardReceta
                                 newStyles={{ width: '100%' }}
-                                color={(comidas[e]) ? '#F7B538' : '#f75538'}
-                                nombre={(comidas[e]) ? buscarReceta(comidas[e]).nombre : 'No Asignado'}
-                                key={comidas[e]}
+                                estiloLetra={{color:'white'}}
+                                color={(comidas[tipoComida]) ? '#82abfa' : '#fa82ab'}
+                                nombre={(comidas[tipoComida]) ? buscarReceta(comidas[tipoComida]).nombre : 'No Asignado'}
+                                key={comidas[tipoComida]}
 
                                 onpress={
-                                    (comidas[e]) ?
-                                        () => navigation.navigate('DetallesRcetaScreen', { idReceta: buscarReceta(comidas[e]).id })
+                                    (comidas[tipoComida]) ?
+                                        () => navigation.navigate('DetallesRcetaScreen', { idReceta: buscarReceta(comidas[tipoComida]).id })
                                         : () => navigation.navigate('StackNavigationRecetas')
                                 }
                             />

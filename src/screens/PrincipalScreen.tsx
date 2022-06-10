@@ -3,7 +3,7 @@ import { ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react
 import { styles } from '../theme/appTheme';
 import { StackScreenProps } from '@react-navigation/stack';
 import { usuario } from '../assets/usuario';
-
+import DiaCard from '../components/DiaCard';
 
 interface Props extends StackScreenProps<any, any> { };
 
@@ -27,50 +27,77 @@ const PrincipalScreen = ({ navigation }: Props) => {
             {/* Banner */}
             <View style={{ ...styles.contenedorItems, height: 220 }} >
                 <ScrollView style={styles.scrollView} horizontal={true}>
-                    <TouchableOpacity style={{}}>
+                    <TouchableOpacity
+                     onPress={() => navigation.navigate('DetallesRcetaScreen',
+                            { idReceta: 'd01' }
+
+                        )} style={{}}
+                       
+                    >
                         <ImageBackground style={{ padding: 10, width: 380, flex: 1, display: 'flex', justifyContent: 'flex-end' }}
                             resizeMode='cover'
                             source={require('../assets/img/crumble.jpg')}
-                            blurRadius={5}>
-                            <Text style={{ fontSize: 60, color: 'white' }}>Crumble de manzana</Text>
+                            // blurRadius={5}
+                        >
+                            {/* <Text style={{ fontSize: 60, color: 'white' }}>Crumble de manzana</Text> */}
                         </ImageBackground>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                     onPress={() => navigation.navigate('DetallesRcetaScreen',
+                            { idReceta: 'a01' }
+
+                        )}>
                         <ImageBackground style={{ padding: 10, width: 380, flex: 1, display: 'flex', justifyContent: 'flex-end' }}
                             resizeMode='cover'
                             source={require('../assets/img/pollo.jpg')}
-                            blurRadius={5}>
-                            <Text style={{ fontSize: 60, color: 'white' }}>Pollo asado</Text>
+                            // blurRadius={5}
+                            >
+                            {/* <Text style={{ fontSize: 60, color: 'white' }}>Pollo asado</Text> */}
 
                         </ImageBackground>
 
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                     onPress={() => navigation.navigate('DetallesRcetaScreen',
+                            { idReceta: 'c01' }
+
+                        )}>
                         <ImageBackground style={{ padding: 10, width: 380, flex: 1, display: 'flex', justifyContent: 'flex-end' }}
                             resizeMode='cover'
                             source={require('../assets/img/omelette.jpg')}
-                            blurRadius={5}>
-                            <Text style={{ fontSize: 60, color: 'white' }}>Huevos Napoleon</Text>
+                            // blurRadius={5}
+                            >
+                            {/* <Text style={{ fontSize: 60, color: 'white' }}>Huevos Napoleon</Text> */}
                         </ImageBackground>
 
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                     onPress={() => navigation.navigate('DetallesRcetaScreen',
+                            { idReceta: 'b01' }
+
+                        )}>
                         <ImageBackground style={{ padding: 10, width: 380, flex: 1, display: 'flex', justifyContent: 'flex-end' }}
                             resizeMode='cover'
                             source={require('../assets/img/limonada.jpg')}
-                            blurRadius={5}>
-                            <Text style={{ fontSize: 60, color: 'white' }}>Limonada de frambuesa</Text>
+                            // blurRadius={5}
+                            >
+                            {/* <Text style={{ fontSize: 60, color: 'white' }}>Limonada de frambuesa</Text> */}
 
                         </ImageBackground>
 
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                     onPress={() => navigation.navigate('DetallesRcetaScreen',
+                            { idReceta: 'p01' }
+
+                        )}>
                         <ImageBackground style={{ padding: 10, width: 380, flex: 1, display: 'flex', justifyContent: 'flex-end' }}
 
                             resizeMode='cover'
                             source={require('../assets/img/chescake.jpg')}
-                            blurRadius={5}>
-                            <Text style={{ fontSize: 60, color: 'white' }}>Cheesecake cookie</Text>
+                            // blurRadius={5}
+                            >
+                            {/* <Text style={{ fontSize: 60, color: 'white' }}>Cheesecake cookie</Text> */}
 
                         </ImageBackground>
 
@@ -80,24 +107,27 @@ const PrincipalScreen = ({ navigation }: Props) => {
             </View>
 
             {/* Resumen */}
-            <View style={styles.contenedorItems} >
+            <View style={{ ...styles.contenedorItems, height: 230 }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >Resumen</Text>
 
                 <ScrollView style={styles.scrollView} horizontal={true}>
                     {
-                        usuario.nombreDias.map((elemento: string, index) => <TouchableOpacity
-                            style={{ ...styles.btnCuadrado, padding: 0, justifyContent: 'center', alignItems: 'center' }}
-                            onPress={() => navigation.navigate('DiaScreen',
-                                { dia: elemento }
-                            )}
-                            key={index}
-                        >
-                            <View>
-                                <Text
-                                    adjustsFontSizeToFit
-                                    style={{ fontSize: 90, textAlign: 'center', color:'white' }} > {elemento} </Text>
-                            </View>
-                        </TouchableOpacity>)
+                        usuario.nombreDias.map((elemento: string, index) => {
+
+
+                            return (<TouchableOpacity
+                                style={{ ...styles.btnCuadrado, padding: 0, justifyContent: 'flex-start', alignItems: 'flex-start', borderRadius: 12 }}
+                                onPress={() => navigation.navigate('DiaScreen',
+                                    { dia: elemento }
+                                )}
+                                key={index}
+                            >
+
+                                <View>
+                                    <DiaCard key={index} nombre={elemento} />
+                                </View>
+                            </TouchableOpacity>)
+                        })
                     }
 
                 </ScrollView>
@@ -106,12 +136,15 @@ const PrincipalScreen = ({ navigation }: Props) => {
             {/* Lista del supermercado*/}
             <View style={{ ...styles.contenedorItems }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >Lista de supermercado</Text>
-                <ScrollView style={{ ...styles.scrollView, paddingHorizontal: 10, backgroundColor: '#FF9505' }} >
+                <ScrollView style={{ ...styles.scrollView, borderTopColor: '#413F42', borderTopWidth: 1 }} >
 
                     {ingredientes.map((ingrediente, index) => (
-                        <Text key={index} style={{ color: '#FCF5E3', fontSize: 24 }} >{ingrediente}</Text>))}
+                        <Text key={index} style={{
+                            color: 'black', fontSize: 22,
+                            fontWeight: '300'
+                        }} >{ingrediente}</Text>))}
 
-    
+
                 </ScrollView>
             </View>
 

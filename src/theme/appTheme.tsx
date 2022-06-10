@@ -1,18 +1,21 @@
 import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     fondo: {
-        backgroundColor: '#fef5e5',
+        backgroundColor: '#77D8B8',
         flex: 1,
-        color: '#000000',
 
     },
+    fontMont: {
+        fontFamily: 'Montserrat-VariableFont_wght'
+    },
+
     principalContainer: {
         flex: 1,
         paddingHorizontal: 20,
         justifyContent: 'flex-start',
 
         // backgroundColor: '#FCF5E3',
-        backgroundColor: '#fef5e5',
+        backgroundColor: '#FFFFFF',
         color: '#393534',
         display: 'flex',
     },
@@ -20,14 +23,16 @@ export const styles = StyleSheet.create({
         marginTop: 20,
         color: '#393534',
         textAlign: 'center',
-        fontSize: 32
+        fontSize: 32,
+        fontFamily: 'Lato-Regular',
 
     },
     subTexto: {
         marginTop: 8,
-        color: '#387af7',
+        color: '#77D8B8',
         textAlign: 'center',
-        fontSize: 24
+        fontSize: 24,
+        fontFamily: 'Lato-Regular',
 
     },
     contenedorItems: {
@@ -48,8 +53,8 @@ export const styles = StyleSheet.create({
     btnCuadrado: {
 
         borderRadius: 4,
-        backgroundColor: '#E2711D',
-        width: 100,
+        backgroundColor: '#82abfa',
+        width: 120,
         // height:100,
         marginRight: 10,
         justifyContent: 'flex-end',
@@ -93,8 +98,8 @@ export const styles = StyleSheet.create({
 
 
     botonCirculoPequeno: {
-        width: 30,
-        height: 30,
+        width: 38,
+        height: 38,
         backgroundColor: 'white',
         display: 'flex',
         justifyContent: 'center',
@@ -113,9 +118,9 @@ export const styles = StyleSheet.create({
 
     },
     botonCirculoPequenoPresionado: {
-        width: 30,
-        height: 30,
-        backgroundColor: '#82abfa',
+        width: 38,
+        height: 38,
+        backgroundColor: '#77D8B8',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -132,14 +137,16 @@ export const styles = StyleSheet.create({
         elevation: 5,
     },
     textoNoPresionado: {
-        color: 'black',
-        fontSize: 24
+        color: 'grey',
+        fontFamily: 'Lato-Regular',
+        fontSize: 22,
 
     },
 
     textoPresionado: {
         color: 'white',
-        fontSize: 24
+        fontFamily: 'Lato-Regular',
+        fontSize: 22,
     }
 
 })

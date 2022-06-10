@@ -7,10 +7,11 @@ interface Props {
     nombre: string;
     color?: string;
     onpress: any;
-    newStyles?: object
+    newStyles?: object;
+    estiloLetra?: object;
 }
 
-const CardReceta = ({ nombre, color = '#F7B538', onpress, newStyles={} }: Props) => {
+const CardReceta = ({ nombre, color = '#f9c869', onpress, newStyles = {}, estiloLetra={} }: Props) => {
     return (
         <TouchableOpacity
             style={{ ...styles.btnCuadrado, ...styles.btnRectangular, backgroundColor: color, ...newStyles }}
@@ -19,7 +20,7 @@ const CardReceta = ({ nombre, color = '#F7B538', onpress, newStyles={} }: Props)
             <View>
                 <Text
                     adjustsFontSizeToFit
-                    style={{ fontSize: 25, marginBottom: 20 }} >{nombre}</Text>
+                    style={{ fontSize: 25, marginBottom: 20, ...estiloLetra }} >{nombre}</Text>
             </View>
         </TouchableOpacity>
     );

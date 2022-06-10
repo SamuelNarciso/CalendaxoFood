@@ -16,6 +16,7 @@ export const StackNavigationCalendario = () => {
         >
             <Stack.Screen name="RecetasScreen" component={CalendarioScreen} />
             <Stack.Screen name="DetallesRcetaScreen" component={DetallesRcetaScreen} />
+            <Stack.Screen name="Recetas" component={RecetasScreen} />
         </Stack.Navigator>
     );
 }

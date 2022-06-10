@@ -30,6 +30,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                             {desayunos.map(e => <CardReceta
                                 nombre={e.nombre}
                                 key={e.id}
+                                color='#f19b9a'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
                                     { idReceta: e.id }
                                 )}
@@ -43,7 +44,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {almuerzos.map(e => <CardReceta
                                 nombre={e.nombre}
-                                key={e.id} color='#DB7C26'
+                                key={e.id} color='#9dbdfc'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
                                     { idReceta: e.id }
 
@@ -57,6 +58,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                         <ScrollView style={styles.scrollView} horizontal={true}>
                             {cenas.map(e => <CardReceta
                                 nombre={e.nombre}
+                                color='#fdaa78'
                                 key={e.id}
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
                                     { idReceta: e.id }
@@ -72,7 +74,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                             {bebidas.map(e => <CardReceta
                                 nombre={e.nombre}
                                 key={e.id}
-                                color='#DB7C26'
+                                color='#fc9dbd'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
                                     { idReceta: e.id }
 
@@ -87,6 +89,7 @@ const RecetasScreen = ({ navigation }: Props) => {
                             {postres.map(e => <CardReceta
                                 nombre={e.nombre}
                                 key={e.id}
+                                color='#fcad9d'
                                 onpress={() => navigation.navigate('DetallesRcetaScreen',
                                     { idReceta: e.id }
 

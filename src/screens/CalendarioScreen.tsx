@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { styles } from '../theme/appTheme';
-import {
-    ScrollView,
-    Text,
-    TouchableOpacity,
-    View
-} from 'react-native';
+import { ImageBackground, ScrollView, Text, View } from 'react-native';
 import { bebidas, desayunos, almuerzos, postres, cenas, buscarReceta } from '../assets/recetas';
 import CardReceta from '../components/CardReceta';
 import { StackScreenProps } from '@react-navigation/stack';
@@ -17,9 +12,45 @@ const CalendarioScreen = ({ navigation }: Props) => {
     const fecha = new Date()
     const dias = ['D', 'L', 'M', 'X', 'J', 'V', 'S',]
     const diaActual = dias[fecha.getDay()]
+        console.log(diaActual)
     const { nombre: diaNombre, ...comidas } = usuario.getDatosDia(diaActual)
+     
     const listaComidas = Object.keys(comidas)
+    const [clavesComidas, setClavesComidas] = useState(usuario.getIdsComidaDiaEspecifico(diaActual))
+    let ProximaComida: any = null
+    let nombreComida = '', ingredientesComida: any[] = [], pasosComida: any[] = []
+    useEffect(() => {
+        // console.log({ clavesComidas })
+        // console.log(listaComidas)
 
+
+    }, [clavesComidas])
+    const hora = fecha.getHours()
+    if (hora >= 0 && hora < 12 && clavesComidas[0]) {
+        console.log('Hora del desayuno')
+        ProximaComida = buscarReceta(clavesComidas[0])
+
+    }
+    if (hora >= 12 && hora < 18 && clavesComidas[1]) {
+        console.log('Hora del Almuerzo')
+        ProximaComida = buscarReceta(clavesComidas[1])
+
+    }
+    if (hora >= 18 && hora <= 23 && clavesComidas[2]) {
+        console.log('Hora del Cena')
+        ProximaComida = buscarReceta(clavesComidas[2])
+
+    }
+    if (ProximaComida == null) {
+        ProximaComida = buscarReceta(clavesComidas[0])
+            || buscarReceta(clavesComidas[1])
+            || buscarReceta(clavesComidas[2])
+            || buscarReceta('a01')
+    }
+    console.log(ProximaComida.nombre)
+    nombreComida = ProximaComida.nombre
+    ingredientesComida = ProximaComida.ingredientes
+    pasosComida = ProximaComida.pasos
 
 
     return (
@@ -37,17 +68,22 @@ const CalendarioScreen = ({ navigation }: Props) => {
                 <ScrollView style={styles.scrollView} horizontal={true}>
 
                     {listaComidas.map((e, index) => (
+
+
                         <CardReceta
-                            color={(comidas[e]) ? '#F7B538' : '#f75538'}
+                            color={(comidas[e]) ? '#82abfa' : '#fa82ab'}
                             nombre={(comidas[e]) ? buscarReceta(comidas[e]).nombre : `No hay ${e} asignado`}
                             key={comidas[e] + index}
 
                             onpress={
                                 (comidas[e]) ?
-                                    () => navigation.navigate('DetallesRcetaScreen', { idReceta: buscarReceta(comidas[e]).id })
-                                    : () => navigation.navigate('RecetasScreen')
+                                    () => navigation.navigate('DetallesRcetaScreen', {
+                                        idReceta: buscarReceta(comidas[e]).id
+                                    })
+                                    : () => navigation.navigate('Recetas')
                             }
                         />
+
 
                     ))}
 
@@ -68,19 +104,36 @@ const CalendarioScreen = ({ navigation }: Props) => {
             {/* Proxima comida */}
             <View style={{ ...styles.contenedorItems, height: 400 }} >
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Proxima comida</Text>
-                <ScrollView style={{ ...styles.scrollView, backgroundColor: '#F09D51' }} >
-                    {/* <TextInput multiline={true} numberOfLines={100} style={{ color: '#000',fontSize: 24}} > */}
-                    <Text style={{ paddingTop: 10, color: '#fff', fontSize: 24 }} > Ingrediente 1</Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Ingrediente 2</Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Ingrediente 3</Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Ingrediente 4</Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
-                    <Text style={{ color: '#fff', fontSize: 24 }} > Descripcion de receta </Text>
-                    {/* </TextInput> */}
+                <ScrollView style={{ ...styles.scrollView }} >
+                    <Text style={{ fontSize: 28, color: '#000' }}>{nombreComida}</Text>
+                    <Text style={{ fontSize: 24, color: '#000',marginVertical:10 }}>Ingredientes</Text>
+
+                    {ingredientesComida.map((elem: string, index: number) => (
+                        <Text
+                            style={{
+                                fontFamily: 'Lato-Regular',
+                                color: '#000',
+                                fontSize: 22,
+                                textAlign: 'justify',
+                                marginVertical:5
+
+                            }}
+                            key={index}>▸ {elem}</Text>))}
+
+                    <Text style={{ fontSize: 24, color: '#000',marginVertical:10 }}>Pasos</Text>
+
+                    {pasosComida.map((elem: string, index: number) => (
+                        <Text
+                            style={{
+                                fontFamily: 'Lato-Regular',
+                                color: '#000',
+                                fontSize: 22,
+                                textAlign: 'justify',
+                                marginVertical:5
+
+                            }}
+                            key={index}>{index}. {elem}</Text>))}
+
                 </ScrollView>
             </View>
 
