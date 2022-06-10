@@ -5,7 +5,7 @@ import CardReceta from '../components/CardReceta';
 import { Text, View } from 'react-native';
 import { buscarReceta } from '../assets/recetas';
 import { StackScreenProps } from '@react-navigation/stack';
-import { usuario } from '../assets/usuario';
+import { getDatosDia } from '../assets/usuario'; /*TODO: */
 
 
 interface RouteParams {
@@ -20,7 +20,7 @@ const DiaScreen = ({ navigation, route }: Props) => {
 
     const dia = params.dia;
 
-    const { nombre: diaNombre, ...comidas } = usuario.getDatosDia(dia)
+    const { nombre: diaNombre, ...comidas } = getDatosDia(dia) /*TODO: */
     // console.log(comidas)
 
     const listaComidas = Object.keys(comidas)
@@ -59,11 +59,11 @@ const DiaScreen = ({ navigation, route }: Props) => {
 
                     {listaComidas.map(tipoComida => (
                         <View style={{ ...styles.contenedorItems, height: 'auto' }} key={tipoComida}>
-                            <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >{ capitalizar(tipoComida) }</Text>
+                            <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} >{capitalizar(tipoComida)}</Text>
 
                             <CardReceta
                                 newStyles={{ width: '100%' }}
-                                estiloLetra={{color:'white'}}
+                                estiloLetra={{ color: 'white' }}
                                 color={(comidas[tipoComida]) ? '#82abfa' : '#fa82ab'}
                                 nombre={(comidas[tipoComida]) ? buscarReceta(comidas[tipoComida]).nombre : 'No Asignado'}
                                 key={comidas[tipoComida]}

@@ -4,11 +4,7 @@ import { bebidas, desayunos, almuerzos, postres, cenas } from '../assets/recetas
 import CardReceta from '../components/CardReceta';
 import { StackScreenProps } from '@react-navigation/stack';
 
-import {
-    ScrollView,
-    Text,
-    View
-} from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 
 interface Props extends StackScreenProps<any, any> { };
 

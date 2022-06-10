@@ -380,7 +380,7 @@ export const cenas = [
 ]
 
 export const buscarReceta = (id: string) => {
-
+    if(!id) return;
     const tipo = id.charAt(0);
     const indice = parseInt(id.substring(1, id.length)) - 1;
 

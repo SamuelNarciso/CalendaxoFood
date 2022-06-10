@@ -4,7 +4,7 @@ import { ImageBackground, ScrollView, Text, View } from 'react-native';
 import { bebidas, desayunos, almuerzos, postres, cenas, buscarReceta } from '../assets/recetas';
 import CardReceta from '../components/CardReceta';
 import { StackScreenProps } from '@react-navigation/stack';
-import { usuario } from '../assets/usuario';
+import { getDatosDia, getIdsComidaDiaEspecifico } from '../assets/usuario'; /*TODO */
 
 interface Props extends StackScreenProps<any, any> { };
 
@@ -12,15 +12,15 @@ const CalendarioScreen = ({ navigation }: Props) => {
     const fecha = new Date()
     const dias = ['D', 'L', 'M', 'X', 'J', 'V', 'S',]
     const diaActual = dias[fecha.getDay()]
-        console.log(diaActual)
-    const { nombre: diaNombre, ...comidas } = usuario.getDatosDia(diaActual)
-     
+    console.log({diaActual})
+    const { nombre: diaNombre, ...comidas } = getDatosDia(diaActual) /*TODO */
+
     const listaComidas = Object.keys(comidas)
-    const [clavesComidas, setClavesComidas] = useState(usuario.getIdsComidaDiaEspecifico(diaActual))
+    const [clavesComidas, setClavesComidas] = useState(getIdsComidaDiaEspecifico(diaActual)) /*TODO */
     let ProximaComida: any = null
     let nombreComida = '', ingredientesComida: any[] = [], pasosComida: any[] = []
     useEffect(() => {
-        // console.log({ clavesComidas })
+        console.log({ clavesComidas })
         // console.log(listaComidas)
 
 
@@ -106,7 +106,7 @@ const CalendarioScreen = ({ navigation }: Props) => {
                 <Text style={{ color: '#000', fontSize: 24, fontWeight: '300' }} > Proxima comida</Text>
                 <ScrollView style={{ ...styles.scrollView }} >
                     <Text style={{ fontSize: 28, color: '#000' }}>{nombreComida}</Text>
-                    <Text style={{ fontSize: 24, color: '#000',marginVertical:10 }}>Ingredientes</Text>
+                    <Text style={{ fontSize: 24, color: '#000', marginVertical: 10 }}>Ingredientes</Text>
 
                     {ingredientesComida.map((elem: string, index: number) => (
                         <Text
@@ -115,12 +115,12 @@ const CalendarioScreen = ({ navigation }: Props) => {
                                 color: '#000',
                                 fontSize: 22,
                                 textAlign: 'justify',
-                                marginVertical:5
+                                marginVertical: 5
 
                             }}
                             key={index}>▸ {elem}</Text>))}
 
-                    <Text style={{ fontSize: 24, color: '#000',marginVertical:10 }}>Pasos</Text>
+                    <Text style={{ fontSize: 24, color: '#000', marginVertical: 10 }}>Pasos</Text>
 
                     {pasosComida.map((elem: string, index: number) => (
                         <Text
@@ -129,7 +129,7 @@ const CalendarioScreen = ({ navigation }: Props) => {
                                 color: '#000',
                                 fontSize: 22,
                                 textAlign: 'justify',
-                                marginVertical:5
+                                marginVertical: 5
 
                             }}
                             key={index}>{index}. {elem}</Text>))}

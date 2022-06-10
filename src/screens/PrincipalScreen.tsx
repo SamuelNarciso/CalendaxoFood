@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { StackScreenProps } from '@react-navigation/stack';
-import { usuario } from '../assets/usuario';
+ import { getIngredientes ,asignarDatosDelStorageADias,nombreDias} from '../assets/usuario'; //TODO: 
 import DiaCard from '../components/DiaCard';
 
 interface Props extends StackScreenProps<any, any> { };
@@ -10,10 +10,12 @@ interface Props extends StackScreenProps<any, any> { };
 const PrincipalScreen = ({ navigation }: Props) => {
     const [ingredientes, setingredientes] = useState([])
     useEffect(() => {
-        usuario.asignarDatosDelStorageADias()
-        let textoIngredientes = usuario.getIngredientes()
+
+         asignarDatosDelStorageADias() //TODO: 
+         let textoIngredientes = getIngredientes() //TODO: 
         const listaIngredientes = textoIngredientes.split(',')
         setingredientes(listaIngredientes)
+        
     }, [])
 
 
@@ -112,7 +114,7 @@ const PrincipalScreen = ({ navigation }: Props) => {
 
                 <ScrollView style={styles.scrollView} horizontal={true}>
                     {
-                        usuario.nombreDias.map((elemento: string, index) => {
+                         nombreDias.map((elemento: string, index) => { //TODO: 
 
 
                             return (<TouchableOpacity

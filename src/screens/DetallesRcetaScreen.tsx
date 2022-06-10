@@ -3,7 +3,7 @@ import { styles } from '../theme/appTheme';
 import { FlatList, ScrollView, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
 import { StackScreenProps, createStackNavigator } from '@react-navigation/stack';
 import { buscarReceta } from '../assets/recetas';
-import { usuario } from '../assets/usuario';
+import { dias,guardarDatos,asignarComida,nombreDias } from '../assets/usuario'; /*TODO: */
 
 const Desayuno = require('../assets/img/backgrounds/des.jpg')
 const Almuerzo = require('../assets/img/backgrounds/almuerzo.jpg')
@@ -40,13 +40,13 @@ const DetallesRcetaScreen = ({
     const idsDiaComida: any = [] = []
 
     useEffect(() => {
-        for (const clave in usuario.dias) { idsDiaComida.push(usuario.dias[clave][tipo.toLowerCase()]) }
+        for (const clave in dias) { idsDiaComida.push(dias[clave][tipo.toLowerCase()]) } /*TODO: */
         setIdsComidas(idsDiaComida)
     }, [internetCheck])
 
 
 
-    const asignarComida = (dia: string, index: number) => {
+    const asignarComidaDetalles = (dia: string, index: number) => {
         let antiguoArr: any = [] = idsComidas;
         antiguoArr[index] = id
 
@@ -56,9 +56,9 @@ const DetallesRcetaScreen = ({
 
 
         setIdsComidas(antiguoArr)
-        usuario.asignarComida(dia, id)
+        asignarComida(dia, id) /*TODO: */
         // console.log(idsComidas)
-        usuario.guardarDatos()
+        guardarDatos() /*TODO: */
     }
 
     return (
@@ -92,7 +92,7 @@ const DetallesRcetaScreen = ({
                     <Text style={{ ...styles.subTexto, fontSize: 18, color: '#fcfcfc' }} >Agregar a</Text>
                     <View style={{ marginTop: 5, marginBottom: 5, display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
 
-                        {usuario.nombreDias.map((dia, index) => (
+                        {nombreDias.map((dia, index) => ( /*TODO: */
                             <TouchableOpacity
                                 key={index + dia}
                                 style={
@@ -101,7 +101,7 @@ const DetallesRcetaScreen = ({
                                         : styles.botonCirculoPequeno
                                 }
                                 onPress={() => {
-                                    asignarComida(dia, index);
+                                    asignarComidaDetalles(dia, index);
                                     setInternetCheck(internetCheck + 1)
                                 }}
                             >
